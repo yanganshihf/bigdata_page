@@ -274,7 +274,12 @@
 		<script src="/dashuju/lib/layui-v2.5.4/layui.js?v=1.0.4" charset="utf-8"></script>
 		<script src="/dashuju/js/lay-config.js?v=1.0.4" charset="utf-8"></script>
 		<script type="text/javascript" src="/dashuju/js/jquery.min.js"></script>
-
+		
+		<script>
+			$(window).load(function(){
+				$(".layui-card").width($(window).width()*0.33);
+			})
+		</script>
 	</body>
 
 </html>
