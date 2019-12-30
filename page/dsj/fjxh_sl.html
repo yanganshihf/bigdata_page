@@ -6,14 +6,13 @@
 		<title></title>
 	</head>
 
-	<body style="background:transparent;">
+	<body style="background:transparent;margin-top: 35px;">
 		<center>
 			<div id="main" style="width: 400px;height:165px;"></div>
 		</center>
 	</body>
 	<script type="text/javascript" src="../../js/lay-module/echarts/echarts.js"></script>
 	<script type="text/javascript" src="../../js/lay-module/echarts/walden.js" ></script>
-	
 	<script>
 		// 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'),'walden');
@@ -67,5 +66,4 @@
 		// 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 	</script>
-	
 </html>
