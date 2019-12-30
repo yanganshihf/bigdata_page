@@ -13,7 +13,22 @@
 				overflow-x：hidden ; overflow-y：auto；
 			}
 			
+			body::-webkit-scrollbar {
+			  display: none; /* Chrome Safari */
+			}
 			
+			body {
+			  scrollbar-width: none; /* firefox */
+			  -ms-overflow-style: none; /* IE 10+ */
+			  overflow-x: hidden;
+			  overflow-y: hidden;
+			}
+				
+		.title{
+			color:#7f9ead;
+			font-weight: 700;
+			position: absolute;
+		}
 		</style>
 	</head>
 
@@ -26,6 +41,14 @@
 		<iframe style="top: 40%;left: 68%;" allowtransparency="true" src="dsj/hcsp_gc.html"></iframe>
 		<iframe style="top: 70%;left: 1%;" allowtransparency="true" src="dsj/hcsp_yxmj.html"></iframe>
 		<iframe style="top: 70%;left: 68%;" allowtransparency="true" src="dsj/rwlx_gc.html"></iframe>
+	
+		<p style="top: 9%;left: 1.5%;" class="title">实时任务</p>
+		<p style="top: 9%;left: 34%" class="title">实时飞机数量</p>
+		<p style="top: 9%;left: 68.5%;" class="title">实时任务</p>
+		<p style="top: 39%;left: 1.5%;" class="title">实时飞机数量</p>
+		<p style="top: 39%;left: 68.5%;" class="title">实时任务</p>
+		<p style="top: 69%;left: 1.5%;" class="title">实时飞机数量</p>
+		<p style="top: 69%;left: 68.5%;" class="title">实时任务</p>
 	</body>
 	<script type="text/javascript">
 		var winheight = $(window).height();
@@ -33,5 +56,5 @@
 		$("iframe").height(winheight * 0.29);
 		$("#main").height(winheight * 0.87);
 	</script>
-
+	
 </html>
