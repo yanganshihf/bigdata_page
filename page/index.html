@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<style>
+			iframe {
+				width: 32%;
+				border: solid 2px #1b4564;
+				position: absolute;
+				overflow-x：hidden ; overflow-y：auto；
+			}
+			
+			
+		</style>
+	</head>
+
+	<body style="margin-top: -7px;background-image:url('../img/dsjbg.png');background-size: cover;">
+		<div id="dsjtitle" style="width: 100%;background-image:url('../img/dsjtitle.png');background-size: cover;"></div>
+		<iframe style="top: 10%;left: 1%;" allowtransparency="true" src="dsj/sjz/example/ssrw.html"></iframe>
+		<iframe style="top: 10%;left: 33.5%;width: 34%;" id="main" allowtransparency="true" src="dsj/ssfj_sl.html"></iframe>
+		<iframe style="top: 10%;left: 68%;" allowtransparency="true" src="dsj/fjxh_sl.html"></iframe>
+		<iframe style="top: 40%;left: 1%;" allowtransparency="true" src="dsj/fxlc_gk.html"></iframe>
+		<iframe style="top: 40%;left: 68%;" allowtransparency="true" src="dsj/hcsp_gc.html"></iframe>
+		<iframe style="top: 70%;left: 1%;" allowtransparency="true" src="dsj/hcsp_yxmj.html"></iframe>
+		<iframe style="top: 70%;left: 68%;" allowtransparency="true" src="dsj/rwlx_gc.html"></iframe>
+	</body>
+	<script type="text/javascript">
+		var winheight = $(window).height();
+		$("#dsjtitle").height(winheight * 0.11);
+		$("iframe").height(winheight * 0.29);
+		$("#main").height(winheight * 0.87);
+	</script>
+
+</html>

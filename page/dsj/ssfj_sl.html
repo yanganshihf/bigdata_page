@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../lib/layui-v2.5.4/css/layui.css" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/lay-module/echarts/echarts.min.js"></script>
+		<script type="text/javascript" src="../../js/lay-module/echarts/china.js" ></script>
+		<style>
+			#china-map {
+				width: 420px;
+				height: 570px;
+				margin: auto;
+			}
+			.box{
+			    margin-top:10px;
+			}
+			.layui-btn-radius{
+				height: 20px;
+				width: 105px;
+				margin: 5px;
+				padding-top: 3px;
+			}
+			.btnLabel{
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body style="background:transparent;">
+		<center>
+			<div id="totalNum" >
+				<button type="button" class="layui-btn layui-btn-sm layui-btn-primary">
+				  <strong>0</strong>
+				</button>
+				<button type="button" class="layui-btn layui-btn-sm layui-btn-primary">
+				  <strong>1</strong>
+				</button>
+				<button type="button" class="layui-btn layui-btn-sm layui-btn-primary">
+				  <strong>0</strong>
+				</button>
+				<button type="button" class="layui-btn layui-btn-sm layui-btn-primary">
+				  <strong>9</strong>
+				</button>
+			</div>
+			<div disabled="disabled" id="china-map" >
+			</div>
+			<div style="width: 300px;height: 180px;position: absolute;top:420px;left:130px;">
+				<label class="btnLabel" for="btn1">北京</label><button style="background-color: #5475f5;" id="btn1" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn2">陕西</label><button style="background-color: #9feaa5;" id="btn2" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn3">四川</label><button style="background-color: #9feaa5;" id="btn3" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn4">新疆</label><button style="background-color: #85daef;" id="btn4" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn5">湖北</label><button style="background-color: #85daef;" id="btn5" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn6">河南</label><button style="background-color: #85daef;" id="btn6" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn7">湖南</label><button style="background-color: #74e2ca;" id="btn7" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn8">江西</label><button style="background-color: #74e2ca;" id="btn8" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn9">青海</label><button style="background-color: #74e2ca;" id="btn9" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn10">辽宁</label><button style="background-color: #e6ac53;" id="btn10" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn11">广东</label><button style="background-color: #e6ac53;" id="btn11" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+				<label class="btnLabel" for="btn12">贵州</label><button style="background-color: #9fb5ea;" id="btn12" type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-warm"></button>
+			</div>
+		</center>
+		<script>
+			window.onload = function() {
+
+				window.onmousewheel = document.onmousewheel=function() {return false}
+				
+			}
+		</script>
+		<script>
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('china-map'));
+			function randomData() {  
+			     return Math.round(Math.random()*30);  
+			} 
+			var mydata = [  
+                {name: '北京',value: '100' },{name: '天津',value: randomData() },  
+                {name: '上海',value: randomData() },{name: '重庆',value: randomData() },  
+                {name: '河北',value: randomData() },{name: '河南',value: randomData() },  
+                {name: '云南',value: randomData() },{name: '辽宁',value: randomData() },  
+                {name: '黑龙江',value: randomData() },{name: '湖南',value: randomData() },  
+                {name: '安徽',value: randomData() },{name: '山东',value: randomData() },  
+                {name: '新疆',value: randomData() },{name: '江苏',value: randomData() },  
+                {name: '浙江',value: randomData() },{name: '江西',value: randomData() },  
+                {name: '湖北',value: randomData() },{name: '广西',value: randomData() },  
+                {name: '甘肃',value: randomData() },{name: '山西',value: randomData() },  
+                {name: '内蒙古',value: randomData() },{name: '陕西',value: randomData() },  
+                {name: '吉林',value: randomData() },{name: '福建',value: randomData() },  
+                {name: '贵州',value: randomData() },{name: '广东',value: randomData() },  
+                {name: '青海',value: randomData() },{name: '西藏',value: randomData() },  
+                {name: '四川',value: randomData() },{name: '宁夏',value: randomData() },  
+                {name: '海南',value: randomData() },{name: '台湾',value: randomData() },  
+                {name: '香港',value: randomData() },{name: '澳门',value: randomData() }  
+            ];
+            
+			var option = {
+				// backgroundColor: '#041932',
+                tooltip : {  
+                    trigger: 'item'  
+                }, 
+                //左侧小导航图标
+                visualMap: {  
+                	show : true,  
+                    // type: 'continuous',  
+                    left:"1%", 
+                    bottom:"0%",
+                    orient:"vertical",                         //图例排列方向
+        			itemWidth:25,                           //图形的宽度，即长条的宽度。
+        			itemHeight:20,                                  //图例内边距，单位px  5  [5, 10]  [5,10,5,10]
+			        backgroundColor:"transparent",            //标题背景色
+			        borderColor:"#ccc",                         //边框颜色
+			        borderWidth:0,
+			        minOpen:true,                       //界面上会额外多出一个『< min』的选块
+        			maxOpen:true,                       //界面上会额外多出一个『> max』的选块。
+                    splitList: [   
+                    	{start: 50},  
+                        {start: 40, end: 50},  
+                        {start: 30, end: 40},
+                        {start: 20, end: 30},
+                        {start: 10, end: 20}, 
+                        {start: 0, end: 10},
+                    ],  
+                    color: ['#5475f5', '#9feaa5', '#85daef','#74e2ca', '#e6ac53', '#9fb5ea'],
+                    textStyle:{//图例文字的样式
+			            color:'#FFFFFF',
+			            fontSize:16
+			        }
+                },
+                
+                //配置属性
+                series: [{  
+                    name: '实时飞机数',  
+                    type: 'map',  
+                    mapType: 'china',   
+                    roam: true,  
+                    left:"10%", 
+                    top:"10%",
+                    zoom: 1.25,   //这里是关键，一定要放在 series中
+                    
+                    label: {  
+                        normal: {  
+                            show: true , //省份名称  
+                            textStyle:{//图例文字的样式
+					            color:'#FFFFFF',
+					            fontSize:14
+					        }
+                        },  
+                        emphasis: {  
+                            show: false  
+                        }  
+                    },  
+                    data:mydata  //数据
+                }]  
+			};
+
+			myChart.setOption(option);
+			myChart.on('mouseover', function(params) {
+				var dataIndex = params.dataIndex;
+				console.log(params);
+			});
+		</script>
+
+	</body>
+
+</html>
