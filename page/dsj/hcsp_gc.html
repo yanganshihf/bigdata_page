@@ -4,12 +4,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		
 	</head>
 
 	<body style="background:transparent;margin-top: 35px;margin-left: 50px;">
+		
 		<center>
 			<div id="main" style="width: 400px;height:165px;"></div>
 		</center>
+		
 	</body>
 	<script type="text/javascript" src="../../js/lay-module/echarts/echarts.js"></script>
 	<script type="text/javascript" src="../../js/lay-module/echarts/walden.js"></script>
@@ -17,12 +20,7 @@
 		// 基于准备好的dom，初始化echarts实例
 		var myChart = echarts.init(document.getElementById('main'), 'walden');
 		option = {
-
-			tooltip: {
-				trigger: 'item',
-				formatter: "{a} <br/>{b} : {c} ({d}%)"
-			},
-
+			
 			series: [{
 				type: 'pie',
 				radius: '65%',
