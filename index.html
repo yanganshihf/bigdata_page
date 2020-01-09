@@ -4,63 +4,61 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<script type="text/javascript" src="js/echarts.js" ></script>
+		<script type="text/javascript" src="js/echarts.js"></script>
 		<link rel="stylesheet" href="js/bootstrap/css/bootstrap/3.3.6/bootstrap.min.css" />
 		<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-		<script type="text/javascript" src="js/bootstrap/js/jquery/2.0.0/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap/js/jquery/2.0.0/jquery.min.js"></script>
 		<!-- 包括所有已编译的插件 -->
-		<script type="text/javascript" src="js/bootstrap/js/bootstrap/3.3.6/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/china.js"></script>
 		<style>
-			#main,#main1,#main2 {
-				
-				width: 100vw;
-			}
 			img {
-			    max-width: 100%;
-			    height: auto;
+				max-width: 100%;
+				height: auto;
 			}
 		</style>
 	</head>
-	
 	<body>
+	<!--<body style="background-image:url('img/dsjbg.png');background-size: cover;">-->
 		<div class="col-md-12 column" style="padding: 0px;">
-			<table class="table table-bordered">
+			<table class="table table-bordered" style="margin: 0px;">
 				<tbody>
 					<tr>
-						<td colspan="3" style="height: 8vh;">
+						<td colspan="3" style="height: 10vh;padding: 0px;">
 							<img src="img/titlebg.png" />
 						</td>
 					</tr>
+					<tr>
+						<td>
+
+						</td>
+						<td rowspan="2" style="padding: 0px;">
+							<div id="china-map" style="width: 30vw;height: 58vh;">
+							</div>
+						</td>
+						<td style="padding: 0px;">
+							<div id="main1" style="width: 30vw;height: 28vh;"></div>
+						</td>
+						
+					</tr>
 					<tr >
-						<td style="height: 30vh;">
-							<div id="main" style="width: 30vw;height: 30vh;"></div>
+						<td style="padding: 0px;">
+							<div id="main" style="width: 30vw;height: 28vh;"></div>
 						</td>
-						<td rowspan="2">
-							TB - Monthly
+						<td style="padding: 0px;">
+							<div id="main3" style="width: 30vw;height: 28vh;"></div>
 						</td>
-						<td>
-							01/04/2012
-						</td>
-						
+
 					</tr>
-					<tr class="error">
-						<td style="height: 29vh;">
-							2
-						</td>
-						<td>
-							02/04/2012
-						</td>
-						
-					</tr>
-					<tr class="warning">
-						<td style="height: 29vh;">
+					<tr >
+						<td style="padding: 0px;">
 							3
 						</td>
-						<td >
+						<td style="padding: 0px;">
 							TB - Monthly
 						</td>
-						<td>
-							03/04/2012
+						<td style="padding: 0px;">
+							<div id="main4" style="width: 30vw;height: 28vh;"></div>
 						</td>
 					</tr>
 				</tbody>
@@ -70,30 +68,325 @@
 
 		<script type="text/javascript">
 			// 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
- 
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: '第一个 ECharts 实例'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
-        };
- 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
+			var myChart = echarts.init(document.getElementById('main'));
+			// 基于准备好的dom，初始化echarts实例
+			var myChart1 = echarts.init(document.getElementById('main1'));
+			var myChart3 = echarts.init(document.getElementById('main3'));
+			var myChart4 = echarts.init(document.getElementById('main4'));
+
+			// 指定图表的配置项和数据
+			var option = {
+				title: {
+					text: '第一个 ECharts 实例'
+				},
+				tooltip: {},
+				/*legend: {
+					data: ['销量']
+				},*/
+				xAxis: {
+					data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+				},
+				yAxis: {},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: [5, 20, 36, 10, 10, 20]
+				}],
+
+			};
+			// 指定图表的配置项和数据
+			var option4 = {
+				title: {
+					text: '第一个 ECharts 实例'
+				},
+				tooltip: {},
+				/*legend: {
+					data: ['销量']
+				},*/
+				xAxis: {
+					data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+				},
+				yAxis: {},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: [5, 20, 36, 10, 10, 20]
+				}],
+
+			};
+
+			var option1 = {
+				title: {
+					text: '实例2'
+				},
+				series: [{
+					name: '访问来源',
+					radius: [20, 110],
+					center: ['25%', '50%'],
+					type: 'pie', // 设置图表类型为饼图
+					radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					data: [ // 数据数组，name 为数据项名称，value 为数据项值
+
+						{
+							value: 335,
+							name: '直接访问'
+						},
+						{
+							value: 400,
+							name: '搜索引擎'
+						}
+					]
+				}, {
+					name: '访问来源1',
+					radius: [30, 110],
+					center: ['75%', '50%'],
+					type: 'pie', // 设置图表类型为饼图
+					radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					data: [ // 数据数组，name 为数据项名称，value 为数据项值
+						{
+							value: 235,
+							name: '视频广告'
+						},
+						{
+							value: 274,
+							name: '联盟广告'
+						}
+					]
+				}]
+			};
+
+			// 基于准备好的dom，初始化echarts实例
+			var myChart2 = echarts.init(document.getElementById('china-map'));
+
+			function randomData() {
+				return Math.round(Math.random() * 30);
+			}
+			var mydata = [{
+					name: '北京',
+					value: '100'
+				}, {
+					name: '天津',
+					value: randomData()
+				},
+				{
+					name: '上海',
+					value: randomData()
+				}, {
+					name: '重庆',
+					value: randomData()
+				},
+				{
+					name: '河北',
+					value: randomData()
+				}, {
+					name: '河南',
+					value: randomData()
+				},
+				{
+					name: '云南',
+					value: randomData()
+				}, {
+					name: '辽宁',
+					value: randomData()
+				},
+				{
+					name: '黑龙江',
+					value: randomData()
+				}, {
+					name: '湖南',
+					value: randomData()
+				},
+				{
+					name: '安徽',
+					value: randomData()
+				}, {
+					name: '山东',
+					value: randomData()
+				},
+				{
+					name: '新疆',
+					value: randomData()
+				}, {
+					name: '江苏',
+					value: randomData()
+				},
+				{
+					name: '浙江',
+					value: randomData()
+				}, {
+					name: '江西',
+					value: randomData()
+				},
+				{
+					name: '湖北',
+					value: randomData()
+				}, {
+					name: '广西',
+					value: randomData()
+				},
+				{
+					name: '甘肃',
+					value: randomData()
+				}, {
+					name: '山西',
+					value: randomData()
+				},
+				{
+					name: '内蒙古',
+					value: randomData()
+				}, {
+					name: '陕西',
+					value: randomData()
+				},
+				{
+					name: '吉林',
+					value: randomData()
+				}, {
+					name: '福建',
+					value: randomData()
+				},
+				{
+					name: '贵州',
+					value: randomData()
+				}, {
+					name: '广东',
+					value: randomData()
+				},
+				{
+					name: '青海',
+					value: randomData()
+				}, {
+					name: '西藏',
+					value: randomData()
+				},
+				{
+					name: '四川',
+					value: randomData()
+				}, {
+					name: '宁夏',
+					value: randomData()
+				},
+				{
+					name: '海南',
+					value: randomData()
+				}, {
+					name: '台湾',
+					value: randomData()
+				},
+				{
+					name: '香港',
+					value: randomData()
+				}, {
+					name: '澳门',
+					value: randomData()
+				}
+			];
+
+			var option2 = {
+				// backgroundColor: '#041932',
+				tooltip: {
+					trigger: 'item'
+				},
+				title: {
+					text: '实时飞机数'
+				},
+				//配置属性
+				series: [{
+					name: '实时飞机数',
+					type: 'map',
+					mapType: 'china',
+					roam: true,
+					left: "10%",
+					top: "10%",
+					zoom: 1.25, //这里是关键，一定要放在 series中
+
+					label: {
+						normal: {
+							show: true, //省份名称  
+							textStyle: { //图例文字的样式
+								color: '#FFFFFF',
+								fontSize: 14
+							}
+						},
+						emphasis: {
+							show: false
+						}
+					},
+					data: mydata //数据
+				}]
+			};
+
+			var option3 = {
+				tooltip: {
+					trigger: 'item',
+					formatter: '{a} <br/>{b}: {c} ({d}%)'
+				},
+				legend: {
+					orient: 'vertical',
+					left: 10,
+					data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+				},
+				series: [{
+					name: '访问来源',
+					type: 'pie',
+					radius: ['40%', '55%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							show: true,
+							textStyle: {
+								fontSize: '20',
+								fontWeight: 'bold'
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					data: [{
+							value: 335,
+							name: '直接访问'
+						},
+						{
+							value: 310,
+							name: '邮件营销'
+						},
+						{
+							value: 234,
+							name: '联盟广告'
+						},
+						{
+							value: 135,
+							name: '视频广告'
+						},
+						{
+							value: 1548,
+							name: '搜索引擎'
+						}
+					]
+				}]
+			};
+
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+			myChart1.setOption(option1);
+			myChart2.setOption(option2);
+			myChart3.setOption(option3);
+			myChart4.setOption(option4);
+			// 响应式布局
+			$(window).resize(function() {
+				myChart.resize();
+				myChart1.resize();
+				myChart2.resize();
+				myChart3.resize();
+				myChart4.resize();
+			});
 		</script>
 	</body>
 
