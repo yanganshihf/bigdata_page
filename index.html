@@ -21,10 +21,10 @@
 	<body>
 	    <body style="background-image:url('img/dsjbg.png');background-size: cover;">
 			
-			<table class="table table-bordered" style="margin: 0px;">
+			<table style="margin: 0px;">
 				<tbody>
 					<tr>
-						<td colspan="3" style="height: 10vh;padding: 0px;">
+						<td colspan="3" style="height: 10vh;padding: 2px;">
 							<img src="img/titlebg.png" />
 						</td>
 					</tr>
@@ -32,33 +32,33 @@
 						<td>
 
 						</td>
-						<td rowspan="2" style="padding: 0px;">
-							<div id="china-map" style="width: 33vw;height: 58vh;">
+						<td rowspan="2" style="padding: 2px;">
+							<div id="china-map" style="width: 32vw;height: 58vh;">
 							</div>
 						</td>
-						<td style="padding: 0px;">
-							<div id="main1" style="width: 33vw;height: 29vh;"></div>
+						<td style="padding: 2px;">
+							<div id="main1" style="width: 32vw;height: 29vh;"></div>
 						</td>
 						
 					</tr>
 					<tr >
-						<td style="padding: 0px;">
-							<div id="main" style="width: 33vw;height: 29vh;"></div>
+						<td style="padding: 2px;">
+							<div id="main" style="width: 32vw;height: 29vh;"></div>
 						</td>
-						<td style="padding: 0px;">
-							<div id="main3" style="width: 33vw;height: 29vh;"></div>
+						<td style="padding: 2px;">
+							<div id="main3" style="width: 32vw;height: 29vh;"></div>
 						</td>
 
 					</tr>
 					<tr >
-						<td style="padding: 0px;">
-							<div id="main5" style="width: 33vw;height: 29vh;"></div>
+						<td style="padding: 2px;">
+							<div id="main5" style="width: 32vw;height: 29vh;"></div>
 						</td>
-						<td style="padding: 0px;">
+						<td style="padding: 2px;">
 							TB - Monthly
 						</td>
-						<td style="padding: 0px;">
-							<div id="main4" style="width: 33vw;height: 29vh;"></div>
+						<td style="padding: 2px;">
+							<div id="main4" style="width: 32vw;height: 29vh;"></div>
 						</td>
 					</tr>
 				</tbody>
@@ -372,7 +372,7 @@
 					data: mydata //数据
 				}]
 			};
-
+			
 			var option3 = {
 				title: {
 					text: '第一个 ECharts 实例',
@@ -448,6 +448,11 @@
 				myChart4.resize();
 				myChart5.resize();
 			});
+			
+			$(window).load(function() {
+				// border: solid 1px blue;
+				$("canvas").css("border","solid 2px #1e5173");
+			});	
 		</script>
 	</body>
 
