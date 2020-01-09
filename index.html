@@ -20,17 +20,17 @@
 	</head>
 	<body>
 	    <body style="background-image:url('img/dsjbg.png');background-size: cover;">
-			<p id="nowtime" style="left: 2%;top: 3.7%;position: absolute;font-weight: 700;color: #FFFFFF;">当前时间:</p>
-			<table style="margin: 0px;">
+			<p id="nowtime" style="left: 4%;top: 3.5%;position: absolute;font-weight: 700;color: #FFFFFF;">当前时间:</p>
+			<table style="margin: 0px;margin-left: 1vw;">
 				<tbody>
 					<tr>
-						<td colspan="3" style="height: 10vh;padding: 2px;">
+						<td colspan="3" style="height: 9vh;padding: 2px;">
 							<img src="img/titlebg.png" />
 						</td>
 					</tr>
 					<tr>
 						<td>
-
+							<div style="border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;"></div>
 						</td>
 						<td rowspan="2" style="padding: 2px;">
 							<div id="china-map" style="width: 32vw;height: 58vh;">
@@ -48,14 +48,13 @@
 						<td style="padding: 2px;">
 							<div id="main3" style="width: 32vw;height: 29vh;"></div>
 						</td>
-
 					</tr>
 					<tr >
 						<td style="padding: 2px;">
 							<div id="main5" style="width: 32vw;height: 29vh;"></div>
 						</td>
 						<td style="padding: 2px;">
-							TB - Monthly
+							<div style="border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;"></div>
 						</td>
 						<td style="padding: 2px;">
 							<div id="main4" style="width: 32vw;height: 29vh;"></div>
@@ -453,6 +452,7 @@
 				// border: solid 1px blue;
 				$("canvas").css("border","solid 2px #1e5173");
 				$("canvas").css("border-radius","5px");
+				$("#china-map canvas").css("border","0px");
 			});	
 		</script>
 		<script type="text/javascript" src="js/getnowtime.js" ></script>
