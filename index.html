@@ -19,8 +19,8 @@
 		</style>
 	</head>
 	<body>
-	<!--<body style="background-image:url('img/dsjbg.png');background-size: cover;">-->
-		<div class="col-md-12 column" style="padding: 0px;">
+	    <body style="background-image:url('img/dsjbg.png');background-size: cover;">
+			
 			<table class="table table-bordered" style="margin: 0px;">
 				<tbody>
 					<tr>
@@ -33,32 +33,32 @@
 
 						</td>
 						<td rowspan="2" style="padding: 0px;">
-							<div id="china-map" style="width: 30vw;height: 58vh;">
+							<div id="china-map" style="width: 33vw;height: 58vh;">
 							</div>
 						</td>
 						<td style="padding: 0px;">
-							<div id="main1" style="width: 30vw;height: 28vh;"></div>
+							<div id="main1" style="width: 33vw;height: 29vh;"></div>
 						</td>
 						
 					</tr>
 					<tr >
 						<td style="padding: 0px;">
-							<div id="main" style="width: 30vw;height: 28vh;"></div>
+							<div id="main" style="width: 33vw;height: 29vh;"></div>
 						</td>
 						<td style="padding: 0px;">
-							<div id="main3" style="width: 30vw;height: 28vh;"></div>
+							<div id="main3" style="width: 33vw;height: 29vh;"></div>
 						</td>
 
 					</tr>
 					<tr >
 						<td style="padding: 0px;">
-							3
+							<div id="main5" style="width: 33vw;height: 29vh;"></div>
 						</td>
 						<td style="padding: 0px;">
 							TB - Monthly
 						</td>
 						<td style="padding: 0px;">
-							<div id="main4" style="width: 30vw;height: 28vh;"></div>
+							<div id="main4" style="width: 33vw;height: 29vh;"></div>
 						</td>
 					</tr>
 				</tbody>
@@ -73,20 +73,32 @@
 			var myChart1 = echarts.init(document.getElementById('main1'));
 			var myChart3 = echarts.init(document.getElementById('main3'));
 			var myChart4 = echarts.init(document.getElementById('main4'));
+			var myChart5 = echarts.init(document.getElementById('main5'));
 
 			// 指定图表的配置项和数据
 			var option = {
 				title: {
-					text: '第一个 ECharts 实例'
+					text: '第一个 ECharts 实例',
+					textStyle : {
+						color:'#fff',
+						fontSize : 15
+					}
 				},
 				tooltip: {},
 				/*legend: {
 					data: ['销量']
 				},*/
 				xAxis: {
-					data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+					data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+					axisLabel:{
+						color:'#fff'
+					}
 				},
-				yAxis: {},
+				yAxis: {
+					axisLabel:{
+						color:'#fff'
+					}
+				},
 				series: [{
 					name: '销量',
 					type: 'bar',
@@ -97,7 +109,11 @@
 			// 指定图表的配置项和数据
 			var option4 = {
 				title: {
-					text: '第一个 ECharts 实例'
+					text: '第一个 ECharts 实例',
+					textStyle : {
+						color:'#fff',
+						fontSize : 15
+					}
 				},
 				tooltip: {},
 				/*legend: {
@@ -114,10 +130,34 @@
 				}],
 
 			};
-
+			// 指定图表的配置项和数据
+			var option5 = {
+				title: {
+					text: '第一个 ECharts 实例',
+					textStyle : {
+						color:'#fff',
+						fontSize : 15
+					}
+				},
+			    xAxis: {
+			        type: 'category',
+			        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+			    },
+			    yAxis: {
+			        type: 'value'
+			    },
+			    series: [{
+			        data: [820, 932, 901, 934, 1290, 1330, 1320],
+			        type: 'line'
+			    }]
+			};
 			var option1 = {
 				title: {
-					text: '实例2'
+					text: '第一个 ECharts 实例',
+					textStyle : {
+						color:'#fff',
+						fontSize : 15
+					}
 				},
 				series: [{
 					name: '访问来源',
@@ -288,7 +328,11 @@
 					trigger: 'item'
 				},
 				title: {
-					text: '实时飞机数'
+					text: '第一个 ECharts 实例',
+					textStyle : {
+						color:'#fff',
+						fontSize : 15
+					}
 				},
 				//配置属性
 				series: [{
@@ -317,14 +361,16 @@
 			};
 
 			var option3 = {
+				title: {
+					text: '第一个 ECharts 实例',
+					textStyle : {
+						color:'#fff',
+						fontSize : 15
+					}
+				},
 				tooltip: {
 					trigger: 'item',
 					formatter: '{a} <br/>{b}: {c} ({d}%)'
-				},
-				legend: {
-					orient: 'vertical',
-					left: 10,
-					data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
 				},
 				series: [{
 					name: '访问来源',
@@ -379,6 +425,7 @@
 			myChart2.setOption(option2);
 			myChart3.setOption(option3);
 			myChart4.setOption(option4);
+			myChart5.setOption(option5);
 			// 响应式布局
 			$(window).resize(function() {
 				myChart.resize();
@@ -386,6 +433,7 @@
 				myChart2.resize();
 				myChart3.resize();
 				myChart4.resize();
+				myChart5.resize();
 			});
 		</script>
 	</body>
