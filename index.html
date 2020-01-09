@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/echarts.js" ></script>
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap/3.3.6/bootstrap.min.css" />
+		<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+		<script type="text/javascript" src="js/bootstrap/js/jquery/2.0.0/jquery.min.js" ></script>
+		<!-- 包括所有已编译的插件 -->
+		<script type="text/javascript" src="js/bootstrap/js/bootstrap/3.3.6/bootstrap.min.js" ></script>
+		<style>
+			#main,#main1,#main2 {
+				
+				width: 100vw;
+			}
+			img {
+			    max-width: 100%;
+			    height: auto;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="col-md-12 column" style="padding: 0px;">
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<td colspan="3" style="height: 8vh;">
+							<img src="img/titlebg.png" />
+						</td>
+					</tr>
+					<tr >
+						<td style="height: 30vh;">
+							<div id="main" style="width: 30vw;height: 30vh;"></div>
+						</td>
+						<td rowspan="2">
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						
+					</tr>
+					<tr class="error">
+						<td style="height: 29vh;">
+							2
+						</td>
+						<td>
+							02/04/2012
+						</td>
+						
+					</tr>
+					<tr class="warning">
+						<td style="height: 29vh;">
+							3
+						</td>
+						<td >
+							TB - Monthly
+						</td>
+						<td>
+							03/04/2012
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+ 
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '第一个 ECharts 实例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+ 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+		</script>
+	</body>
+
+</html>
