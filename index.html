@@ -656,13 +656,20 @@
 					left: "10%",
 					top: "10%",
 					zoom: 1.25, //这里是关键，一定要放在 series中
-
+					itemStyle : {
+						areaColor : '#0c162f',
+						borderColor : '#94d3f0',
+						borderWidth : 1.5,
+						shadowColor: 'rgba(0, 0, 0, 0.6)',
+    					shadowBlur: 15
+					},
 					label: {
 						normal: {
 							show: true, //省份名称  
 							textStyle: { //图例文字的样式
 								color: '#7f9ead',
-								fontSize: 14
+								fontSize: 12,
+								fontWeight : 'bold'
 							}
 						},
 						emphasis: {
