@@ -98,10 +98,37 @@
 				color: #7f9ead;
 				font-size: 12px;
 			}
+			body{transform: scale(0.98)}
+			#totalNum{
+				position: absolute;
+				left: 50%;
+				margin-left: -50px;
+				top :13%
+			}
+			#totalNum button {
+				box-shadow: 10px 0px 10px rgba(0,0,0,0.95);
+				border-radius: 2px;
+			}
 		</style>
 	</head>
 
 	<body style="background-image:url('img/dsjbg.png');background-size: cover;padding: -5px;">
+		<!--显示实时飞机数量-->
+		<div id="totalNum" >
+			<button type="button" >
+			  <strong>0</strong>
+			</button>
+			<button type="button" >
+			  <strong>1</strong>
+			</button>
+			<button type="button" >
+			  <strong>0</strong>
+			</button>
+			<button type="button" >
+			  <strong>9</strong>
+			</button>
+		</div>	
+			
 		<!--显示当前时间-->
 		<p id="nowtime" style="left: 4%;top: 3.5%;position: absolute;font-weight: 700;color: #FFFFFF;">当前时间:</p>
 		<!--菜单栏-->
@@ -654,7 +681,7 @@
 					mapType: 'china',
 					roam: true,
 					left: "10%",
-					top: "10%",
+					top: "18%",
 					zoom: 1.25, //这里是关键，一定要放在 series中
 					itemStyle : {
 						areaColor : '#0c162f',
