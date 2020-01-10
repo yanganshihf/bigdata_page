@@ -98,7 +98,7 @@
 				color: #7f9ead;
 				font-size: 12px;
 			}
-			body{transform: scale(0.98)}
+			
 			#totalNum{
 				position: absolute;
 				left: 50%;
@@ -322,6 +322,7 @@
 		</div>
 		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 		<script type="text/javascript" src="js/fullScreen.js"></script>
+		<script type="text/javascript" src="js/walden.js" ></script>
 		<script type="text/javascript">
 			$(function() {
 				//全屏
@@ -335,14 +336,14 @@
 					$("#exitFullScreen").hide();
 				})
 			})
-
+			
 			// 基于准备好的dom，初始化echarts实例
-			var myChart = echarts.init(document.getElementById('main'));
+			var myChart = echarts.init(document.getElementById('main'),'walden');
 			// 基于准备好的dom，初始化echarts实例
-			var myChart1 = echarts.init(document.getElementById('main1'));
-			var myChart3 = echarts.init(document.getElementById('main3'));
-			var myChart4 = echarts.init(document.getElementById('main4'));
-			var myChart5 = echarts.init(document.getElementById('main5'));
+			var myChart1 = echarts.init(document.getElementById('main1'),'walden');
+			var myChart3 = echarts.init(document.getElementById('main3'),'walden');
+			var myChart4 = echarts.init(document.getElementById('main4'),'walden');
+			var myChart5 = echarts.init(document.getElementById('main5'),'walden');
 
 			// 指定图表的配置项和数据
 			var option = {
