@@ -432,7 +432,7 @@
 			};
 			var option1 = {
 				title: {
-					text: '第一个 ECharts 实例',
+					text: '任务类型构成',
 					textStyle: {
 						color: '#7f9ead',
 						fontSize: 15
@@ -443,16 +443,33 @@
 					radius: [20, 110],
 					center: ['30%', '50%'],
 					type: 'pie', // 设置图表类型为饼图
-					radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					radius: ['45%', '60%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					label: {
+						normal: {
+							show: false, //省份名称  
+							position : 'center',
+							fontWeight : 'bold',
+							formatter: '{b}: {d}'
+						}
+					},
 					data: [ // 数据数组，name 为数据项名称，value 为数据项值
 
 						{
-							value: 335,
-							name: '直接访问'
+							value: 105,
+							name: '一次性任务',
+							label: {
+								normal: {
+									show: true, //省份名称  
+									position : 'center',
+									fontWeight : 'bold',
+									formatter: '{b}\n\n{d}%',
+									fontSize : 15
+								}
+							}
 						},
 						{
-							value: 400,
-							name: '搜索引擎'
+							value: 42,
+							name: '循环任务'
 						}
 					]
 				}, {
@@ -460,15 +477,32 @@
 					radius: [30, 110],
 					center: ['70%', '50%'],
 					type: 'pie', // 设置图表类型为饼图
-					radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					radius: ['45%', '60%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					label: {
+						normal: {
+							show: false, //省份名称  
+							position : 'center',
+							fontWeight : 'bold',
+							formatter: '{b}: {c}'
+						}
+					},
 					data: [ // 数据数组，name 为数据项名称，value 为数据项值
 						{
-							value: 235,
-							name: '视频广告'
+							value: 42,
+							name: '循环任务',
+							label: {
+								normal: {
+									show: true, //省份名称  
+									position : 'center',
+									fontWeight : 'bold',
+									formatter: '{b}\n\n{d}%',
+									fontSize : 15
+								}
+							}
 						},
 						{
-							value: 274,
-							name: '联盟广告'
+							value: 105,
+							name: '一次性任务'
 						}
 					]
 				}]
@@ -657,39 +691,7 @@
 					radius: ['50%', '62%'],
 					avoidLabelOverlap: false,
 					label: {
-						formatter: '  {b|{b}：}{c}  {per|{d}%}  ',
-						backgroundColor: '#1e5173',
-						borderColor: '#aaa',
-						borderWidth: 1,
-						borderRadius: 3,
-						// shadowBlur:3,
-						// shadowOffsetX: 2,
-						// shadowOffsetY: 2,
-						// shadowColor: '#999',
-						// padding: [0, 7],
-						rich: {
-							a: {
-								color: '#999',
-								lineHeight: 20,
-								align: 'center'
-							},
-							hr: {
-								borderColor: '#aaa',
-								width: '100%',
-								borderWidth: 0.5,
-								height: 0
-							},
-							b: {
-								fontSize: 12,
-								lineHeight: 25
-							},
-							per: {
-								color: '#eee',
-								backgroundColor: '#334455',
-								padding: [2, 2],
-								borderRadius: 3
-							}
-						}
+						formatter: '{b}：{d}%',
 					},
 					/*labelLine: {
 						normal: {
@@ -698,7 +700,17 @@
 					},*/
 					data: [{
 							value: 33,
-							name: '大疆'
+							name: '大疆',
+							label: {
+								normal: {
+									show: true, //省份名称  
+									position : 'center',
+									fontWeight : 'bold',
+									fontSize : 18,
+									color : '#fff',
+									formatter: '181GB'
+								}
+							}
 						},
 						{
 							value: 31,
