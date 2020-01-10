@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="js/bootstrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/china.js"></script>
 		<link rel="stylesheet" href="js/fontawesome/css/font-awesome.min.css" />
-
+		<link rel="stylesheet" href="css/scollerbar.css" />
 		<style>
 			img {
 				max-width: 100%;
@@ -29,52 +29,43 @@
 			.timerItem {
 				width: 100%;
 				height: 100px;
-				padding: 5px;
 				text-align: center;
+				color: #FFFFFF;
 			}
-			/*谷歌、safari、qq浏览器、360浏览器滚动条样式*/
-			/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 			
-			::-webkit-scrollbar {
-				width: 5px;
+			.timer {
+				width: 29%;
+				float: left;
+				border-right: solid 1px #1B6D85;
+				color: #FFFFFF;
 				height: 110px;
-				background-color: #F5F5F5;
+				text-align: center;
+				padding-top: 33px;
 			}
-			/*定义滚动条轨道 内阴影+圆角*/
 			
-			::-webkit-scrollbar-track {
-				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-				border-radius: 10px;
-				background-color: #F5F5F5;
+			.messionInfo {
+				width: 70%;
+				float: left;
+				color: #FFFFFF;
+				height: 110px;
+				text-align: left;
 			}
-			/*定义滑块 内阴影+圆角*/
 			
-			::-webkit-scrollbar-thumb {
-				border-radius: 10px;
-				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-				background-color: #7f9ead;
+			.arrow {
+				 border-color: rgba(0,0,0,0) #1b3c67 rgba(0,0,0,0) rgba(0,0,0,0);
+				 border-style: solid;
+				 border-width: 1vw;
+				 height: 0px;
+				 width: 0px;
+				 float: left;
+				 margin-top: 33px;
 			}
-			/*滑块效果*/
-			
-			::-webkit-scrollbar-thumb:hover {
+			.content{
+				background-color: #1b3c67;
+				width: 16vw;
+				height: 100px;
+				float: left;
 				border-radius: 5px;
-				-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-				background: rgba(0, 0, 0, 0.4);
-			}
-			/*IE滚动条颜色*/
-			
-			html {
-				scrollbar-face-color: #bfbfbf;
-				/*滚动条颜色*/
-				scrollbar-highlight-color: #000;
-				scrollbar-3dlight-color: #000;
-				scrollbar-darkshadow-color: #000;
-				scrollbar-Shadow-color: #adadad;
-				/*滑块边色*/
-				scrollbar-arrow-color: rgba(0, 0, 0, 0.4);
-				/*箭头颜色*/
-				scrollbar-track-color: #eeeeee;
-				/*背景颜色*/
 			}
 		</style>
 	</head>
@@ -105,17 +96,23 @@
 							<div style="border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;">
 								<p style="color:#7f9ead;font-weight: bold;margin: 5px;">实时任务</p>
 								<div style="overflow-y: auto;height: 25vh;margin-top: -10px;">
-									<div class="timerItem">
-										<h1>aaa</h1>
+									<div class="timer">
+										1.10<br>10:04
 									</div>
-									<div class="timerItem">
-										<h1>bbb</h1>
+									<div class="messionInfo">
+										<div class="arrow">	
+										</div>
+										<div class="content">	
+										</div>
 									</div>
-									<div class="timerItem">
-										<h1>ccc</h1>
+									<div class="timer">
+										1.9<br>14:55
 									</div>
-									<div class="timerItem">
-										<h1>ddd</h1>
+									<div class="messionInfo">
+										<div class="arrow">	
+										</div>
+										<div class="content">	
+										</div>
 									</div>
 								</div>
 							</div>
