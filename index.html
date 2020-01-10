@@ -368,6 +368,7 @@
 					}
 				},
 				yAxis: {
+					show: false,
 					axisLabel: {
 						color: '#fff'
 					},
@@ -378,6 +379,14 @@
 				series: [{
 					name: '',
 					type: 'bar',
+					label: {
+		                show: true,
+		                position: 'top',
+		                textStyle: {
+							color: '#FFFFFF',
+							fontSize: 15
+						}
+		            },
 					data: [5, 20, 36, 10, 10, 20]
 				}],
 
@@ -406,6 +415,7 @@
 					}
 				},
 				yAxis: {
+					show :false,
 					axisLabel: {
 						color: '#fff'
 					},
@@ -416,7 +426,15 @@
 				series: [{
 					name: '',
 					type: 'bar',
-					data: [6, 18, 37, 9, 12, 21]
+					data: [6, 18, 37, 9, 12, 21],
+					label: {
+		                show: true,
+		                position: 'top',
+		                textStyle: {
+							color: '#FFFFFF',
+							fontSize: 15
+						}
+		            },
 				}],
 
 			};
@@ -443,8 +461,10 @@
 					splitLine: { // 隐藏网格线
 						show: false
 					}
+					
 				},
 				yAxis: {
+					show: false,
 					type: 'value',
 					axisLabel: {
 						color: '#fff'
@@ -455,7 +475,15 @@
 				},
 				series: [{
 					data: [82, 133, 90, 93, 129, 65, 132],
-					type: 'line'
+					type: 'line',
+					label: {
+		                show: true,
+		                position: 'top',
+		                textStyle: {
+							color: '#FFFFFF',
+							fontSize: 15
+						}
+		            },
 				}]
 			};
 			var option1 = {
