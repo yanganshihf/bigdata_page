@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		
+
 		<script type="text/javascript" src="js/echarts.js"></script>
 		<link rel="stylesheet" href="js/bootstrap/css/bootstrap/3.3.6/bootstrap.min.css" />
 		<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
@@ -13,32 +13,86 @@
 		<script type="text/javascript" src="js/bootstrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/china.js"></script>
 		<link rel="stylesheet" href="js/fontawesome/css/font-awesome.min.css" />
-		
+
 		<style>
 			img {
 				max-width: 100%;
 				height: auto;
 			}
-			a{
+			
+			a {
 				color: #FFFFFF;
 				font-weight: bold;
 				margin-right: 30px;
 			}
+			
+			.timerItem {
+				width: 100%;
+				height: 100px;
+				padding: 5px;
+				text-align: center;
+			}
+			/*谷歌、safari、qq浏览器、360浏览器滚动条样式*/
+			/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+			
+			::-webkit-scrollbar {
+				width: 5px;
+				height: 110px;
+				background-color: #F5F5F5;
+			}
+			/*定义滚动条轨道 内阴影+圆角*/
+			
+			::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+				border-radius: 10px;
+				background-color: #F5F5F5;
+			}
+			/*定义滑块 内阴影+圆角*/
+			
+			::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+				background-color: #7f9ead;
+			}
+			/*滑块效果*/
+			
+			::-webkit-scrollbar-thumb:hover {
+				border-radius: 5px;
+				-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+				background: rgba(0, 0, 0, 0.4);
+			}
+			/*IE滚动条颜色*/
+			
+			html {
+				scrollbar-face-color: #bfbfbf;
+				/*滚动条颜色*/
+				scrollbar-highlight-color: #000;
+				scrollbar-3dlight-color: #000;
+				scrollbar-darkshadow-color: #000;
+				scrollbar-Shadow-color: #adadad;
+				/*滑块边色*/
+				scrollbar-arrow-color: rgba(0, 0, 0, 0.4);
+				/*箭头颜色*/
+				scrollbar-track-color: #eeeeee;
+				/*背景颜色*/
+			}
 		</style>
 	</head>
+
 	<body>
-	    <body style="background-image:url('img/dsjbg.png');background-size: cover;">
+
+		<body style="background-image:url('img/dsjbg.png');background-size: cover;">
 			<!--显示当前时间-->
 			<p id="nowtime" style="left: 4%;top: 3.5%;position: absolute;font-weight: 700;color: #FFFFFF;">当前时间:</p>
 			<!--菜单栏-->
 			<nav style="position: absolute;right: 1.5%;top: 3.5%;">
-				<a ><i class="fa fa-user-o" aria-hidden="true"></i> admin</a>
-				<a id="fullScreen" ><i class="fa fa-expand" aria-hidden="true"></i> 全屏</a>
-				<a id="exitFullScreen" style="display: none;"><i  class="fa fa-compress" aria-hidden="true"></i> 退出全屏</a>
-				<a ><i class="fa fa-power-off" aria-hidden="true"></i> 退出</a>
-				<a ><i class="fa fa-sign-in" aria-hidden="true"></i> 进入</a>
+				<a><i class="fa fa-user-o" aria-hidden="true"></i> admin</a>
+				<a id="fullScreen"><i class="fa fa-expand" aria-hidden="true"></i> 全屏</a>
+				<a id="exitFullScreen" style="display: none;"><i class="fa fa-compress" aria-hidden="true"></i> 退出全屏</a>
+				<a><i class="fa fa-power-off" aria-hidden="true"></i> 退出</a>
+				<a><i class="fa fa-sign-in" aria-hidden="true"></i> 进入</a>
 			</nav>
-			
+
 			<table style="margin: 0px;margin-left: 1vw;">
 				<tbody>
 					<tr>
@@ -48,7 +102,23 @@
 					</tr>
 					<tr>
 						<td>
-							<div style="border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;"></div>
+							<div style="border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;">
+								<p style="color:#7f9ead;font-weight: bold;margin: 5px;">实时任务</p>
+								<div style="overflow-y: auto;height: 25vh;margin-top: -10px;">
+									<div class="timerItem">
+										<h1>aaa</h1>
+									</div>
+									<div class="timerItem">
+										<h1>bbb</h1>
+									</div>
+									<div class="timerItem">
+										<h1>ccc</h1>
+									</div>
+									<div class="timerItem">
+										<h1>ddd</h1>
+									</div>
+								</div>
+							</div>
 						</td>
 						<td rowspan="2" style="padding: 2px;">
 							<div id="china-map" style="width: 32vw;height: 58vh;">
@@ -57,9 +127,9 @@
 						<td style="padding: 2px;">
 							<div id="main1" style="width: 32vw;height: 29vh;"></div>
 						</td>
-						
+
 					</tr>
-					<tr >
+					<tr>
 						<td style="padding: 2px;">
 							<div id="main" style="width: 32vw;height: 29vh;"></div>
 						</td>
@@ -67,7 +137,7 @@
 							<div id="main3" style="width: 32vw;height: 29vh;"></div>
 						</td>
 					</tr>
-					<tr >
+					<tr>
 						<td style="padding: 2px;">
 							<div id="main5" style="width: 32vw;height: 29vh;"></div>
 						</td>
@@ -80,432 +150,431 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
-		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-		<script type="text/javascript" src="js/fullScreen.js" ></script>
-		<script type="text/javascript">
-			$(function(){
-			    //全屏
-			    $("#fullScreen").on("click",function(){
-			        fullScreen();
-			        $("#fullScreen").hide();
-			    })
-			    //退出全屏
-			    $("#exitFullScreen").on("click",function(){
-			        exitFullscreen();
-			        $("#exitFullScreen").hide();
-			    })
-			})
+			</div>
+			<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+			<script type="text/javascript" src="js/fullScreen.js"></script>
+			<script type="text/javascript">
+				$(function() {
+					//全屏
+					$("#fullScreen").on("click", function() {
+						fullScreen();
+						$("#fullScreen").hide();
+					})
+					//退出全屏
+					$("#exitFullScreen").on("click", function() {
+						exitFullscreen();
+						$("#exitFullScreen").hide();
+					})
+				})
 
-			
-			// 基于准备好的dom，初始化echarts实例
-			var myChart = echarts.init(document.getElementById('main'));
-			// 基于准备好的dom，初始化echarts实例
-			var myChart1 = echarts.init(document.getElementById('main1'));
-			var myChart3 = echarts.init(document.getElementById('main3'));
-			var myChart4 = echarts.init(document.getElementById('main4'));
-			var myChart5 = echarts.init(document.getElementById('main5'));
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('main'));
+				// 基于准备好的dom，初始化echarts实例
+				var myChart1 = echarts.init(document.getElementById('main1'));
+				var myChart3 = echarts.init(document.getElementById('main3'));
+				var myChart4 = echarts.init(document.getElementById('main4'));
+				var myChart5 = echarts.init(document.getElementById('main5'));
 
-			// 指定图表的配置项和数据
-			var option = {
-				title: {
-					text: '第一个 ECharts 实例',
-					textStyle : {
-						color:'#7f9ead',
-						fontSize : 15
-					}
-				},
-				tooltip: {},
-				/*legend: {
-					data: ['销量']
-				},*/
-				xAxis: {
-					data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
-					axisLabel:{
-						color:'#fff'
-					},
-					splitLine:{       // 隐藏网格线
-			          show:false
-			        }
-				},
-				yAxis: {
-					axisLabel:{
-						color:'#fff'
-					},
-					splitLine:{       // 隐藏网格线
-			          show:false
-			        }
-				},
-				series: [{
-					name: '销量',
-					type: 'bar',
-					data: [5, 20, 36, 10, 10, 20]
-				}],
-
-			};
-			// 指定图表的配置项和数据
-			var option4 = {
-				title: {
-					text: '第一个 ECharts 实例',
-					textStyle : {
-						color:'#7f9ead',
-						fontSize : 15
-					}
-				},
-				tooltip: {},
-				/*legend: {
-					data: ['销量']
-				},*/
-				xAxis: {
-					data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
-					axisLabel:{
-						color:'#fff'
-					},
-					splitLine:{       // 隐藏网格线
-			          show:false
-			        }
-				},
-				yAxis: {
-					axisLabel:{
-						color:'#fff'
-					},
-					splitLine:{       // 隐藏网格线
-			          show:false
-			        }
-				},
-				series: [{
-					name: '销量',
-					type: 'bar',
-					data: [5, 20, 36, 10, 10, 20]
-				}],
-
-			};
-			// 指定图表的配置项和数据
-			var option5 = {
-				title: {
-					text: '第一个 ECharts 实例',
-					textStyle : {
-						color:'#7f9ead',
-						fontSize : 15
-					}
-				},
-			    xAxis: {
-			        type: 'category',
-			        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-			        axisLabel:{
-						color:'#fff'
-					},
-					splitLine:{       // 隐藏网格线
-			          show:false
-			        }
-			    },
-			    yAxis: {
-			        type: 'value',
-			        axisLabel:{
-						color:'#fff'
-					},
-					splitLine:{       // 隐藏网格线
-			          show:false
-			        }
-			    },
-			    series: [{
-			        data: [820, 932, 901, 934, 1290, 1330, 1320],
-			        type: 'line'
-			    }]
-			};
-			var option1 = {
-				title: {
-					text: '第一个 ECharts 实例',
-					textStyle : {
-						color:'#7f9ead',
-						fontSize : 15
-					}
-				},
-				series: [{
-					name: '访问来源',
-					radius: [20, 110],
-					center: ['25%', '50%'],
-					type: 'pie', // 设置图表类型为饼图
-					radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
-					data: [ // 数据数组，name 为数据项名称，value 为数据项值
-
-						{
-							value: 335,
-							name: '直接访问'
-						},
-						{
-							value: 400,
-							name: '搜索引擎'
+				// 指定图表的配置项和数据
+				var option = {
+					title: {
+						text: '第一个 ECharts 实例',
+						textStyle: {
+							color: '#7f9ead',
+							fontSize: 15
 						}
-					]
-				}, {
-					name: '访问来源1',
-					radius: [30, 110],
-					center: ['75%', '50%'],
-					type: 'pie', // 设置图表类型为饼图
-					radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
-					data: [ // 数据数组，name 为数据项名称，value 为数据项值
-						{
-							value: 235,
-							name: '视频广告'
+					},
+					tooltip: {},
+					/*legend: {
+						data: ['销量']
+					},*/
+					xAxis: {
+						data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+						axisLabel: {
+							color: '#fff'
 						},
-						{
-							value: 274,
-							name: '联盟广告'
+						splitLine: { // 隐藏网格线
+							show: false
 						}
-					]
-				}]
-			};
+					},
+					yAxis: {
+						axisLabel: {
+							color: '#fff'
+						},
+						splitLine: { // 隐藏网格线
+							show: false
+						}
+					},
+					series: [{
+						name: '销量',
+						type: 'bar',
+						data: [5, 20, 36, 10, 10, 20]
+					}],
 
-			// 基于准备好的dom，初始化echarts实例
-			var myChart2 = echarts.init(document.getElementById('china-map'));
+				};
+				// 指定图表的配置项和数据
+				var option4 = {
+					title: {
+						text: '第一个 ECharts 实例',
+						textStyle: {
+							color: '#7f9ead',
+							fontSize: 15
+						}
+					},
+					tooltip: {},
+					/*legend: {
+						data: ['销量']
+					},*/
+					xAxis: {
+						data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+						axisLabel: {
+							color: '#fff'
+						},
+						splitLine: { // 隐藏网格线
+							show: false
+						}
+					},
+					yAxis: {
+						axisLabel: {
+							color: '#fff'
+						},
+						splitLine: { // 隐藏网格线
+							show: false
+						}
+					},
+					series: [{
+						name: '销量',
+						type: 'bar',
+						data: [5, 20, 36, 10, 10, 20]
+					}],
 
-			function randomData() {
-				return Math.round(Math.random() * 30);
-			}
-			var mydata = [{
-					name: '北京',
-					value: '100'
-				}, {
-					name: '天津',
-					value: randomData()
-				},
-				{
-					name: '上海',
-					value: randomData()
-				}, {
-					name: '重庆',
-					value: randomData()
-				},
-				{
-					name: '河北',
-					value: randomData()
-				}, {
-					name: '河南',
-					value: randomData()
-				},
-				{
-					name: '云南',
-					value: randomData()
-				}, {
-					name: '辽宁',
-					value: randomData()
-				},
-				{
-					name: '黑龙江',
-					value: randomData()
-				}, {
-					name: '湖南',
-					value: randomData()
-				},
-				{
-					name: '安徽',
-					value: randomData()
-				}, {
-					name: '山东',
-					value: randomData()
-				},
-				{
-					name: '新疆',
-					value: randomData()
-				}, {
-					name: '江苏',
-					value: randomData()
-				},
-				{
-					name: '浙江',
-					value: randomData()
-				}, {
-					name: '江西',
-					value: randomData()
-				},
-				{
-					name: '湖北',
-					value: randomData()
-				}, {
-					name: '广西',
-					value: randomData()
-				},
-				{
-					name: '甘肃',
-					value: randomData()
-				}, {
-					name: '山西',
-					value: randomData()
-				},
-				{
-					name: '内蒙古',
-					value: randomData()
-				}, {
-					name: '陕西',
-					value: randomData()
-				},
-				{
-					name: '吉林',
-					value: randomData()
-				}, {
-					name: '福建',
-					value: randomData()
-				},
-				{
-					name: '贵州',
-					value: randomData()
-				}, {
-					name: '广东',
-					value: randomData()
-				},
-				{
-					name: '青海',
-					value: randomData()
-				}, {
-					name: '西藏',
-					value: randomData()
-				},
-				{
-					name: '四川',
-					value: randomData()
-				}, {
-					name: '宁夏',
-					value: randomData()
-				},
-				{
-					name: '海南',
-					value: randomData()
-				}, {
-					name: '台湾',
-					value: randomData()
-				},
-				{
-					name: '香港',
-					value: randomData()
-				}, {
-					name: '澳门',
-					value: randomData()
+				};
+				// 指定图表的配置项和数据
+				var option5 = {
+					title: {
+						text: '第一个 ECharts 实例',
+						textStyle: {
+							color: '#7f9ead',
+							fontSize: 15
+						}
+					},
+					xAxis: {
+						type: 'category',
+						data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+						axisLabel: {
+							color: '#fff'
+						},
+						splitLine: { // 隐藏网格线
+							show: false
+						}
+					},
+					yAxis: {
+						type: 'value',
+						axisLabel: {
+							color: '#fff'
+						},
+						splitLine: { // 隐藏网格线
+							show: false
+						}
+					},
+					series: [{
+						data: [820, 932, 901, 934, 1290, 1330, 1320],
+						type: 'line'
+					}]
+				};
+				var option1 = {
+					title: {
+						text: '第一个 ECharts 实例',
+						textStyle: {
+							color: '#7f9ead',
+							fontSize: 15
+						}
+					},
+					series: [{
+						name: '访问来源',
+						radius: [20, 110],
+						center: ['25%', '50%'],
+						type: 'pie', // 设置图表类型为饼图
+						radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+						data: [ // 数据数组，name 为数据项名称，value 为数据项值
+
+							{
+								value: 335,
+								name: '直接访问'
+							},
+							{
+								value: 400,
+								name: '搜索引擎'
+							}
+						]
+					}, {
+						name: '访问来源1',
+						radius: [30, 110],
+						center: ['75%', '50%'],
+						type: 'pie', // 设置图表类型为饼图
+						radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+						data: [ // 数据数组，name 为数据项名称，value 为数据项值
+							{
+								value: 235,
+								name: '视频广告'
+							},
+							{
+								value: 274,
+								name: '联盟广告'
+							}
+						]
+					}]
+				};
+
+				// 基于准备好的dom，初始化echarts实例
+				var myChart2 = echarts.init(document.getElementById('china-map'));
+
+				function randomData() {
+					return Math.round(Math.random() * 30);
 				}
-			];
-
-			var option2 = {
-				// backgroundColor: '#041932',
-				tooltip: {
-					trigger: 'item'
-				},
-				title: {
-					text: '第一个 ECharts 实例',
-					textStyle : {
-						color:'#7f9ead',
-						fontSize : 15
+				var mydata = [{
+						name: '北京',
+						value: '100'
+					}, {
+						name: '天津',
+						value: randomData()
+					},
+					{
+						name: '上海',
+						value: randomData()
+					}, {
+						name: '重庆',
+						value: randomData()
+					},
+					{
+						name: '河北',
+						value: randomData()
+					}, {
+						name: '河南',
+						value: randomData()
+					},
+					{
+						name: '云南',
+						value: randomData()
+					}, {
+						name: '辽宁',
+						value: randomData()
+					},
+					{
+						name: '黑龙江',
+						value: randomData()
+					}, {
+						name: '湖南',
+						value: randomData()
+					},
+					{
+						name: '安徽',
+						value: randomData()
+					}, {
+						name: '山东',
+						value: randomData()
+					},
+					{
+						name: '新疆',
+						value: randomData()
+					}, {
+						name: '江苏',
+						value: randomData()
+					},
+					{
+						name: '浙江',
+						value: randomData()
+					}, {
+						name: '江西',
+						value: randomData()
+					},
+					{
+						name: '湖北',
+						value: randomData()
+					}, {
+						name: '广西',
+						value: randomData()
+					},
+					{
+						name: '甘肃',
+						value: randomData()
+					}, {
+						name: '山西',
+						value: randomData()
+					},
+					{
+						name: '内蒙古',
+						value: randomData()
+					}, {
+						name: '陕西',
+						value: randomData()
+					},
+					{
+						name: '吉林',
+						value: randomData()
+					}, {
+						name: '福建',
+						value: randomData()
+					},
+					{
+						name: '贵州',
+						value: randomData()
+					}, {
+						name: '广东',
+						value: randomData()
+					},
+					{
+						name: '青海',
+						value: randomData()
+					}, {
+						name: '西藏',
+						value: randomData()
+					},
+					{
+						name: '四川',
+						value: randomData()
+					}, {
+						name: '宁夏',
+						value: randomData()
+					},
+					{
+						name: '海南',
+						value: randomData()
+					}, {
+						name: '台湾',
+						value: randomData()
+					},
+					{
+						name: '香港',
+						value: randomData()
+					}, {
+						name: '澳门',
+						value: randomData()
 					}
-				},
-				//配置属性
-				series: [{
-					name: '实时飞机数',
-					type: 'map',
-					mapType: 'china',
-					roam: true,
-					left: "10%",
-					top: "10%",
-					zoom: 1.25, //这里是关键，一定要放在 series中
+				];
 
-					label: {
-						normal: {
-							show: true, //省份名称  
-							textStyle: { //图例文字的样式
-								color: '#FFFFFF',
-								fontSize: 14
+				var option2 = {
+					// backgroundColor: '#041932',
+					tooltip: {
+						trigger: 'item'
+					},
+					title: {
+						text: '第一个 ECharts 实例',
+						textStyle: {
+							color: '#7f9ead',
+							fontSize: 15
+						}
+					},
+					//配置属性
+					series: [{
+						name: '实时飞机数',
+						type: 'map',
+						mapType: 'china',
+						roam: true,
+						left: "10%",
+						top: "10%",
+						zoom: 1.25, //这里是关键，一定要放在 series中
+
+						label: {
+							normal: {
+								show: true, //省份名称  
+								textStyle: { //图例文字的样式
+									color: '#FFFFFF',
+									fontSize: 14
+								}
+							},
+							emphasis: {
+								show: false
 							}
 						},
-						emphasis: {
-							show: false
-						}
-					},
-					data: mydata //数据
-				}]
-			};
-			
-			var option3 = {
-				title: {
-					text: '第一个 ECharts 实例',
-					textStyle : {
-						color:'#7f9ead',
-						fontSize : 15
-					}
-				},
-				tooltip: {
-					trigger: 'item',
-					formatter: '{a} <br/>{b}: {c} ({d}%)'
-				},
-				series: [{
-					name: '访问来源',
-					type: 'pie',
-					radius: ['40%', '55%'],
-					avoidLabelOverlap: false,
-					label: {
-						normal: {
-							show: false,
-							position: 'center'
-						},
-						emphasis: {
-							show: true,
-							textStyle: {
-								fontSize: '20',
-								fontWeight: 'bold'
-							}
-						}
-					},
-					labelLine: {
-						normal: {
-							show: false
-						}
-					},
-					data: [{
-							value: 335,
-							name: '直接访问'
-						},
-						{
-							value: 310,
-							name: '邮件营销'
-						},
-						{
-							value: 234,
-							name: '联盟广告'
-						},
-						{
-							value: 135,
-							name: '视频广告'
-						},
-						{
-							value: 1548,
-							name: '搜索引擎'
-						}
-					]
-				}]
-			};
+						data: mydata //数据
+					}]
+				};
 
-			// 使用刚指定的配置项和数据显示图表。
-			myChart.setOption(option);
-			myChart1.setOption(option1);
-			myChart2.setOption(option2);
-			myChart3.setOption(option3);
-			myChart4.setOption(option4);
-			myChart5.setOption(option5);
-			// 响应式布局
-			$(window).resize(function() {
-				myChart.resize();
-				myChart1.resize();
-				myChart2.resize();
-				myChart3.resize();
-				myChart4.resize();
-				myChart5.resize();
-			});
-			
-			$(window).load(function() {
-				// border: solid 1px blue;
-				$("canvas").css("border","solid 2px #1e5173");
-				$("canvas").css("border-radius","5px");
-				$("#china-map canvas").css("border","0px");
-			});	
-		</script>
-		<script type="text/javascript" src="js/getnowtime.js" ></script>
-	</body>
+				var option3 = {
+					title: {
+						text: '第一个 ECharts 实例',
+						textStyle: {
+							color: '#7f9ead',
+							fontSize: 15
+						}
+					},
+					tooltip: {
+						trigger: 'item',
+						formatter: '{a} <br/>{b}: {c} ({d}%)'
+					},
+					series: [{
+						name: '访问来源',
+						type: 'pie',
+						radius: ['40%', '55%'],
+						avoidLabelOverlap: false,
+						label: {
+							normal: {
+								show: false,
+								position: 'center'
+							},
+							emphasis: {
+								show: true,
+								textStyle: {
+									fontSize: '20',
+									fontWeight: 'bold'
+								}
+							}
+						},
+						labelLine: {
+							normal: {
+								show: false
+							}
+						},
+						data: [{
+								value: 335,
+								name: '直接访问'
+							},
+							{
+								value: 310,
+								name: '邮件营销'
+							},
+							{
+								value: 234,
+								name: '联盟广告'
+							},
+							{
+								value: 135,
+								name: '视频广告'
+							},
+							{
+								value: 1548,
+								name: '搜索引擎'
+							}
+						]
+					}]
+				};
+
+				// 使用刚指定的配置项和数据显示图表。
+				myChart.setOption(option);
+				myChart1.setOption(option1);
+				myChart2.setOption(option2);
+				myChart3.setOption(option3);
+				myChart4.setOption(option4);
+				myChart5.setOption(option5);
+				// 响应式布局
+				$(window).resize(function() {
+					myChart.resize();
+					myChart1.resize();
+					myChart2.resize();
+					myChart3.resize();
+					myChart4.resize();
+					myChart5.resize();
+				});
+
+				$(window).load(function() {
+					// border: solid 1px blue;
+					$("canvas").css("border", "solid 2px #1e5173");
+					$("canvas").css("border-radius", "5px");
+					$("#china-map canvas").css("border", "0px");
+				});
+			</script>
+			<script type="text/javascript" src="js/getnowtime.js"></script>
+		</body>
 
 </html>
