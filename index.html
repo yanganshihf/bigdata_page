@@ -654,14 +654,14 @@
 				series: [{
 					name: '回传视频构成',
 					type: 'pie',
-					radius: ['50%', '63%'],
+					radius: ['50%', '62%'],
 					avoidLabelOverlap: false,
 					label: {
-						formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
-						backgroundColor: '#eee',
+						formatter: '  {b|{b}：}{c}  {per|{d}%}  ',
+						backgroundColor: '#1e5173',
 						borderColor: '#aaa',
 						borderWidth: 1,
-						borderRadius: 4,
+						borderRadius: 3,
 						// shadowBlur:3,
 						// shadowOffsetX: 2,
 						// shadowOffsetY: 2,
@@ -670,16 +670,9 @@
 						rich: {
 							a: {
 								color: '#999',
-								lineHeight: 22,
+								lineHeight: 20,
 								align: 'center'
 							},
-							// abg: {
-							//     backgroundColor: '#333',
-							//     width: '100%',
-							//     align: 'right',
-							//     height: 22,
-							//     borderRadius: [4, 4, 0, 0]
-							// },
 							hr: {
 								borderColor: '#aaa',
 								width: '100%',
@@ -687,14 +680,14 @@
 								height: 0
 							},
 							b: {
-								fontSize: 16,
-								lineHeight: 33
+								fontSize: 12,
+								lineHeight: 25
 							},
 							per: {
 								color: '#eee',
 								backgroundColor: '#334455',
-								padding: [2, 4],
-								borderRadius: 2
+								padding: [2, 2],
+								borderRadius: 3
 							}
 						}
 					},
@@ -711,6 +704,7 @@
 							value: 31,
 							name: '御2'
 						},
+						
 						{
 							value: 23,
 							name: '禅思'
