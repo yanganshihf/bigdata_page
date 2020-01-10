@@ -1,3 +1,13 @@
+$(function(){
+    //全屏
+    $("#fullScreen").on("click",function(){
+        fullScreen();
+    })
+    //退出全屏
+    $("#exitFullScreen").on("click",function(){
+        exitFullscreen();
+    })
+})
 
 //fullScreen()和exitScreen()有多种实现方式，此处只使用了其中一种
 //全屏
