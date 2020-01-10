@@ -51,17 +51,19 @@
 				text-align: left;
 			}
 			/*箭头*/
+			
 			.arrow {
-				 border-color: rgba(0,0,0,0) #1b3c67 rgba(0,0,0,0) rgba(0,0,0,0);
-				 border-style: solid;
-				 border-width: 1vw;
-				 height: 0px;
-				 width: 0px;
-				 float: left;
-				 margin-top: 33px;
+				border-color: rgba(0, 0, 0, 0) #1b3c67 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+				border-style: solid;
+				border-width: 1vw;
+				height: 0px;
+				width: 0px;
+				float: left;
+				margin-top: 33px;
 			}
 			/*内容*/
-			.content{
+			
+			.content {
 				background-color: #1b3c67;
 				width: 16vw;
 				height: 100px;
@@ -72,650 +74,684 @@
 				font-size: 12px;
 			}
 			/*标题*/
-			.messionTitle{
+			
+			.messionTitle {
 				font-size: 13px;
 				font-weight: bold;
 				color: #F7C709;
 			}
 			/*标签位置*/
-			.biaoqian{
+			
+			.biaoqian {
 				float: right;
 				margin-right: -16px;
 			}
-			td{
+			
+			td {
 				width: 35%;
 				height: 4vh;
 				color: #FFFFFF;
 				text-align: center;
 			}
-			#topProvence p{
+			
+			#topProvence p {
 				color: #7f9ead;
 				font-size: 12px;
 			}
 		</style>
 	</head>
-		<body style="background-image:url('img/dsjbg.png');background-size: cover;padding: -5px;">
-			<!--显示当前时间-->
-			<p id="nowtime" style="left: 4%;top: 3.5%;position: absolute;font-weight: 700;color: #FFFFFF;">当前时间:</p>
-			<!--菜单栏-->
-			<nav style="position: absolute;right: 1%;top: 3.5%;">
-				<a><i class="fa fa-user-o" aria-hidden="true"></i> admin</a>
-				<a id="fullScreen"><i class="fa fa-expand" aria-hidden="true"></i> 全屏</a>
-				<a id="exitFullScreen" style="display: none;"><i class="fa fa-compress" aria-hidden="true"></i> 退出全屏</a>
-				<a><i class="fa fa-power-off" aria-hidden="true"></i> 退出</a>
-				<a><i class="fa fa-sign-in" aria-hidden="true"></i> 进入</a>
-			</nav>
 
-			<table style="margin: 0px;margin-left: 1vw;">
-				<tbody>
-					<tr>
-						<td colspan="3" style="height: 9vh;padding: 2px;">
-							<img src="img/titlebg.png" />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div style="border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;">
-								<p style="color:#7f9ead;font-weight: bold;margin: 5px;text-align: left;">实时任务</p>
-								<div style="overflow-y: auto;height: 25vh;margin-top: -10px;">
-									<div class="timer">
-										1.10<img class="biaoqian" src="img/bq.png"/>
-										<br>10:04
-										
+	<body style="background-image:url('img/dsjbg.png');background-size: cover;padding: -5px;">
+		<!--显示当前时间-->
+		<p id="nowtime" style="left: 4%;top: 3.5%;position: absolute;font-weight: 700;color: #FFFFFF;">当前时间:</p>
+		<!--菜单栏-->
+		<nav style="position: absolute;right: 1%;top: 3.5%;">
+			<a><i class="fa fa-user-o" aria-hidden="true"></i> admin</a>
+			<a id="fullScreen"><i class="fa fa-expand" aria-hidden="true"></i> 全屏</a>
+			<a id="exitFullScreen" style="display: none;"><i class="fa fa-compress" aria-hidden="true"></i> 退出全屏</a>
+			<a><i class="fa fa-power-off" aria-hidden="true"></i> 退出</a>
+			<a><i class="fa fa-sign-in" aria-hidden="true"></i> 进入</a>
+		</nav>
+
+		<table style="margin: 0px;margin-left: 1vw;">
+			<tbody>
+				<tr>
+					<td colspan="3" style="height: 9vh;padding: 2px;">
+						<img src="img/titlebg.png" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;">
+							<p style="color:#7f9ead;font-weight: bold;margin: 5px;text-align: left;">实时任务</p>
+							<div style="overflow-y: auto;height: 25vh;margin-top: -10px;">
+								<div class="timer">
+									1.10<img class="biaoqian" src="img/bq.png" />
+									<br>10:04
+
+								</div>
+								<div class="messionInfo">
+									<!--箭头样式-->
+									<div class="arrow">
 									</div>
-									<div class="messionInfo">
-										<!--箭头样式-->
-										<div class="arrow">	
-										</div>
-										<div class="content">
-											<p class="messionTitle">黑茶山日常巡护任务</p>
-											<p>执行人员 :薛吉曼  执行飞机 :御2</p>
-											<p>联系电话 :15829225555</p>
-										</div>
+									<div class="content">
+										<p class="messionTitle">黑茶山日常巡护任务</p>
+										<p>执行人员 :薛吉曼 执行飞机 :御2</p>
+										<p>联系电话 :15829225555</p>
 									</div>
-									<div class="timer">
-										1.9<img class="biaoqian" src="img/bq.png"/>
-										<br>14:55
+								</div>
+								<div class="timer">
+									1.9<img class="biaoqian" src="img/bq.png" />
+									<br>14:55
+								</div>
+								<div class="messionInfo">
+									<!--箭头样式-->
+									<div class="arrow">
 									</div>
-									<div class="messionInfo">
-										<!--箭头样式-->
-										<div class="arrow">	
-										</div>
-										<div class="content">
-											<p class="messionTitle">黑茶山日常巡护任务</p>
-											<p>执行人员 :薛吉曼  执行飞机 :御2</p>
-											<p>联系电话 :15829225555</p>
-										</div>
+									<div class="content">
+										<p class="messionTitle">黑茶山日常巡护任务</p>
+										<p>执行人员 :薛吉曼 执行飞机 :御2</p>
+										<p>联系电话 :15829225555</p>
 									</div>
 								</div>
 							</div>
-						</td>
-						<td rowspan="2" style="padding: 2px;">
-							<div id="china-map" style="width: 32vw;height: 58vh;">
-							</div>
-						</td>
-						<td style="padding: 2px;">
-							<div id="main1" style="width: 32vw;height: 29vh;"></div>
-						</td>
+						</div>
+					</td>
+					<td rowspan="2" style="padding: 2px;">
+						<div id="china-map" style="width: 32vw;height: 58vh;">
+						</div>
+					</td>
+					<td style="padding: 2px;">
+						<div id="main1" style="width: 32vw;height: 29vh;"></div>
+					</td>
 
-					</tr>
-					<tr>
-						<td style="padding: 2px;">
-							<div id="main" style="width: 32vw;height: 29vh;"></div>
-						</td>
-						<td style="padding: 2px;">
-							<div id="main3" style="width: 32vw;height: 29vh;"></div>
-						</td>
-					</tr>
-					<tr>
-						<td style="padding: 2px;">
-							<div id="main5" style="width: 32vw;height: 29vh;"></div>
-						</td>
-						<td style="padding: 2px;">
-							<div style="overflow-y: auto;padding: 0.3vw;padding-top: 1vw;border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;">
-								<table id="topProvence" style="width: 100%;">
-									<tbody>
-										<tr>
-											<td>
-												<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orangered;"></div>
-												<p style="float: left;margin-left: 5px;color: orangered;">≥50</p>
-											</td>
-											<td >
-												<p style="float: left;">广东</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orangered;"></div>
-												
-											</td>
-											<td>
-												<p style="float: left;">福建</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: #FFFF88;"></div>
-												
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: orange;"></div>
-												<p style="float: left;margin-left: 5px;color: red;">40-50</p>
-											</td>
-											<td >
-												<p style="float: left;">重庆</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orange;"></div>
-												
-											</td>
-											<td>
-												<p style="float: left;">陕西</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightgreen;"></div>
-												
-											</td>
-										</tr>
-										<tr >
-											
-											<td>
-												<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: yellow;"></div>
-												<p style="float: left;margin-left: 5px;color: yellow;">30-40</p>
-											</td>
-											<td >
-												<p style="float: left;">湖北</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orange;"></div>
-												
-											</td>
-											<td>
-												<p style="float: left;">江西</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightgreen;"></div>
-												
-											</td>
-										</tr>
-										<tr >
-											
-											<td>
-												<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: #FFFF88;"></div>
-												<p style="float: left;margin-left: 5px;color: #FFFF88;">20-30</p>
-											</td>
-											<td >
-												<p style="float: left;">四川</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: yellow;"></div>
-												
-											</td>
-											<td>
-												<p style="float: left;">湖南</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightcyan;"></div>
-												
-											</td>
-										</tr>
-										<tr >
-											
-											<td>
-												<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: lightgreen;"></div>
-												<p style="float: left;margin-left: 5px;color: lightgreen;">10-20</p>
-											</td>
-											<td >
-												<p style="float: left;">河南</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: yellow;"></div>
-												
-											</td>
-											<td>
-												<p style="float: left;">青海</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightcyan;"></div>
-												
-											</td>
-										</tr>
-										<tr >
-											
-											<td>
-												<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: lightcyan;"></div>
-												<p style="float: left;margin-left: 5px;color: lightcyan;">≤10</p>
-											</td>
-											<td >
-												<p style="float: left;">内蒙</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: #FFFF88;"></div>
-												
-											</td>
-											<td>
-												<p style="float: left;">安徽</p>
-												<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightcyan;"></div>
-												
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</td>
-						<td style="padding: 2px;">
-							<div id="main4" style="width: 32vw;height: 29vh;"></div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			</div>
-			<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-			<script type="text/javascript" src="js/fullScreen.js"></script>
-			<script type="text/javascript">
-				$(function() {
-					//全屏
-					$("#fullScreen").on("click", function() {
-						fullScreen();
-						$("#fullScreen").hide();
-					})
-					//退出全屏
-					$("#exitFullScreen").on("click", function() {
-						exitFullscreen();
-						$("#exitFullScreen").hide();
-					})
+				</tr>
+				<tr>
+					<td style="padding: 2px;">
+						<div id="main" style="width: 32vw;height: 29vh;"></div>
+					</td>
+					<td style="padding: 2px;">
+						<div id="main3" style="width: 32vw;height: 29vh;"></div>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 2px;">
+						<div id="main5" style="width: 32vw;height: 29vh;"></div>
+					</td>
+					<td style="padding: 2px;">
+						<div style="overflow-y: auto;padding: 0.3vw;padding-top: 1vw;border-radius: 5px;border:solid 2px #1e5173;width: 32vw;height: 29vh;">
+							<table id="topProvence" style="width: 100%;">
+								<tbody>
+									<tr>
+										<td>
+											<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orangered;"></div>
+											<p style="float: left;margin-left: 5px;color: orangered;">≥50</p>
+										</td>
+										<td>
+											<p style="float: left;">广东</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orangered;"></div>
+
+										</td>
+										<td>
+											<p style="float: left;">福建</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: #FFFF88;"></div>
+
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: orange;"></div>
+											<p style="float: left;margin-left: 5px;color: red;">40-50</p>
+										</td>
+										<td>
+											<p style="float: left;">重庆</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orange;"></div>
+
+										</td>
+										<td>
+											<p style="float: left;">陕西</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightgreen;"></div>
+
+										</td>
+									</tr>
+									<tr>
+
+										<td>
+											<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: yellow;"></div>
+											<p style="float: left;margin-left: 5px;color: yellow;">30-40</p>
+										</td>
+										<td>
+											<p style="float: left;">湖北</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: orange;"></div>
+
+										</td>
+										<td>
+											<p style="float: left;">江西</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightgreen;"></div>
+
+										</td>
+									</tr>
+									<tr>
+
+										<td>
+											<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: #FFFF88;"></div>
+											<p style="float: left;margin-left: 5px;color: #FFFF88;">20-30</p>
+										</td>
+										<td>
+											<p style="float: left;">四川</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: yellow;"></div>
+
+										</td>
+										<td>
+											<p style="float: left;">湖南</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightcyan;"></div>
+
+										</td>
+									</tr>
+									<tr>
+
+										<td>
+											<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: lightgreen;"></div>
+											<p style="float: left;margin-left: 5px;color: lightgreen;">10-20</p>
+										</td>
+										<td>
+											<p style="float: left;">河南</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: yellow;"></div>
+
+										</td>
+										<td>
+											<p style="float: left;">青海</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightcyan;"></div>
+
+										</td>
+									</tr>
+									<tr>
+
+										<td>
+											<div style="margin-left: 2vw;float: left;width: 22px;height: 16px;border-radius: 3px;;background-color: lightcyan;"></div>
+											<p style="float: left;margin-left: 5px;color: lightcyan;">≤10</p>
+										</td>
+										<td>
+											<p style="float: left;">内蒙</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: #FFFF88;"></div>
+
+										</td>
+										<td>
+											<p style="float: left;">安徽</p>
+											<div style="float: left;margin-left: 0.5vw;float: left;width: 6vw;height: 16px;border-radius: 3px;;border-radius: 3px;background-color: lightcyan;"></div>
+
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</td>
+					<td style="padding: 2px;">
+						<div id="main4" style="width: 32vw;height: 29vh;"></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+		<script type="text/javascript" src="js/fullScreen.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				//全屏
+				$("#fullScreen").on("click", function() {
+					fullScreen();
+					$("#fullScreen").hide();
 				})
+				//退出全屏
+				$("#exitFullScreen").on("click", function() {
+					exitFullscreen();
+					$("#exitFullScreen").hide();
+				})
+			})
 
-				// 基于准备好的dom，初始化echarts实例
-				var myChart = echarts.init(document.getElementById('main'));
-				// 基于准备好的dom，初始化echarts实例
-				var myChart1 = echarts.init(document.getElementById('main1'));
-				var myChart3 = echarts.init(document.getElementById('main3'));
-				var myChart4 = echarts.init(document.getElementById('main4'));
-				var myChart5 = echarts.init(document.getElementById('main5'));
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main'));
+			// 基于准备好的dom，初始化echarts实例
+			var myChart1 = echarts.init(document.getElementById('main1'));
+			var myChart3 = echarts.init(document.getElementById('main3'));
+			var myChart4 = echarts.init(document.getElementById('main4'));
+			var myChart5 = echarts.init(document.getElementById('main5'));
 
-				// 指定图表的配置项和数据
-				var option = {
-					title: {
-						text: '飞机型号数量',
-						textStyle: {
-							color: '#7f9ead',
-							fontSize: 15
-						}
-					},
-					tooltip: {},
-					/*legend: {
-						data: ['销量']
-					},*/
-					xAxis: {
-						data: ["大疆", "御2", "精灵", "禅思", "EBee", "精灵4"],
-						axisLabel: {
-							color: '#fff'
-						},
-						splitLine: { // 隐藏网格线
-							show: false
-						}
-					},
-					yAxis: {
-						axisLabel: {
-							color: '#fff'
-						},
-						splitLine: { // 隐藏网格线
-							show: false
-						}
-					},
-					series: [{
-						name: '销量',
-						type: 'bar',
-						data: [5, 20, 36, 10, 10, 20]
-					}],
-
-				};
-				// 指定图表的配置项和数据
-				var option4 = {
-					title: {
-						text: '回传影像面积',
-						textStyle: {
-							color: '#7f9ead',
-							fontSize: 15
-						},
-						
-					},
-					tooltip: {},
-					/*legend: {
-						data: ['销量']
-					},*/
-					xAxis: {
-						data: ["大疆", "御2", "精灵", "禅思", "EBee", "精灵4"],
-						axisLabel: {
-							color: '#fff'
-						},
-						splitLine: { // 隐藏网格线
-							show: false
-						}
-					},
-					yAxis: {
-						axisLabel: {
-							color: '#fff'
-						},
-						splitLine: { // 隐藏网格线
-							show: false
-						}
-					},
-					series: [{
-						name: '销量',
-						type: 'bar',
-						data: [6, 18, 37, 9, 12, 21]
-					}],
-
-				};
-				// 指定图表的配置项和数据
-				var option5 = {
-					title: {
-						text: '飞行里程概况',
-						textStyle: {
-							color: '#7f9ead',
-							fontSize: 15
-						},
-						subtext:'近7日飞行总里程',
-						subtextStyle: {
-							color: '#7f9ead',
-							fontSize: 12
-						},
-					},
-					xAxis: {
-						type: 'category',
-						data: ['05', '06', '07', '08', '09', '10', '11'],
-						axisLabel: {
-							color: '#fff'
-						},
-						splitLine: { // 隐藏网格线
-							show: false
-						}
-					},
-					yAxis: {
-						type: 'value',
-						axisLabel: {
-							color: '#fff'
-						},
-						splitLine: { // 隐藏网格线
-							show: false
-						}
-					},
-					series: [{
-						data: [82, 133, 90, 93, 129, 65, 132],
-						type: 'line'
-					}]
-				};
-				var option1 = {
-					title: {
-						text: '第一个 ECharts 实例',
-						textStyle: {
-							color: '#7f9ead',
-							fontSize: 15
-						}
-					},
-					series: [{
-						name: '访问来源',
-						radius: [20, 110],
-						center: ['30%', '50%'],
-						type: 'pie', // 设置图表类型为饼图
-						radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
-						data: [ // 数据数组，name 为数据项名称，value 为数据项值
-
-							{
-								value: 335,
-								name: '直接访问'
-							},
-							{
-								value: 400,
-								name: '搜索引擎'
-							}
-						]
-					}, {
-						name: '访问来源1',
-						radius: [30, 110],
-						center: ['70%', '50%'],
-						type: 'pie', // 设置图表类型为饼图
-						radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
-						data: [ // 数据数组，name 为数据项名称，value 为数据项值
-							{
-								value: 235,
-								name: '视频广告'
-							},
-							{
-								value: 274,
-								name: '联盟广告'
-							}
-						]
-					}]
-				};
-
-				// 基于准备好的dom，初始化echarts实例
-				var myChart2 = echarts.init(document.getElementById('china-map'));
-
-				function randomData() {
-					return Math.round(Math.random() * 30);
-				}
-				var mydata = [{
-						name: '北京',
-						value: '100'
-					}, {
-						name: '天津',
-						value: randomData()
-					},
-					{
-						name: '上海',
-						value: randomData()
-					}, {
-						name: '重庆',
-						value: randomData()
-					},
-					{
-						name: '河北',
-						value: randomData()
-					}, {
-						name: '河南',
-						value: randomData()
-					},
-					{
-						name: '云南',
-						value: randomData()
-					}, {
-						name: '辽宁',
-						value: randomData()
-					},
-					{
-						name: '黑龙江',
-						value: randomData()
-					}, {
-						name: '湖南',
-						value: randomData()
-					},
-					{
-						name: '安徽',
-						value: randomData()
-					}, {
-						name: '山东',
-						value: randomData()
-					},
-					{
-						name: '新疆',
-						value: randomData()
-					}, {
-						name: '江苏',
-						value: randomData()
-					},
-					{
-						name: '浙江',
-						value: randomData()
-					}, {
-						name: '江西',
-						value: randomData()
-					},
-					{
-						name: '湖北',
-						value: randomData()
-					}, {
-						name: '广西',
-						value: randomData()
-					},
-					{
-						name: '甘肃',
-						value: randomData()
-					}, {
-						name: '山西',
-						value: randomData()
-					},
-					{
-						name: '内蒙古',
-						value: randomData()
-					}, {
-						name: '陕西',
-						value: randomData()
-					},
-					{
-						name: '吉林',
-						value: randomData()
-					}, {
-						name: '福建',
-						value: randomData()
-					},
-					{
-						name: '贵州',
-						value: randomData()
-					}, {
-						name: '广东',
-						value: randomData()
-					},
-					{
-						name: '青海',
-						value: randomData()
-					}, {
-						name: '西藏',
-						value: randomData()
-					},
-					{
-						name: '四川',
-						value: randomData()
-					}, {
-						name: '宁夏',
-						value: randomData()
-					},
-					{
-						name: '海南',
-						value: randomData()
-					}, {
-						name: '台湾',
-						value: randomData()
-					},
-					{
-						name: '香港',
-						value: randomData()
-					}, {
-						name: '澳门',
-						value: randomData()
+			// 指定图表的配置项和数据
+			var option = {
+				title: {
+					text: '飞机型号数量',
+					textStyle: {
+						color: '#7f9ead',
+						fontSize: 15
 					}
-				];
-
-				var option2 = {
-					// backgroundColor: '#041932',
-					tooltip: {
-						trigger: 'item'
+				},
+				tooltip: {},
+				/*legend: {
+					data: ['销量']
+				},*/
+				xAxis: {
+					data: ["大疆", "御2", "精灵", "禅思", "EBee", "精灵4"],
+					axisLabel: {
+						color: '#fff'
 					},
-					title: {
-						text: '实时飞机数量',
-						textStyle: {
-							color: '#7f9ead',
-							fontSize: 15
+					splitLine: { // 隐藏网格线
+						show: false
+					}
+				},
+				yAxis: {
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: { // 隐藏网格线
+						show: false
+					}
+				},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: [5, 20, 36, 10, 10, 20]
+				}],
+
+			};
+			// 指定图表的配置项和数据
+			var option4 = {
+				title: {
+					text: '回传影像面积',
+					textStyle: {
+						color: '#7f9ead',
+						fontSize: 15
+					},
+
+				},
+				tooltip: {},
+				/*legend: {
+					data: ['销量']
+				},*/
+				xAxis: {
+					data: ["大疆", "御2", "精灵", "禅思", "EBee", "精灵4"],
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: { // 隐藏网格线
+						show: false
+					}
+				},
+				yAxis: {
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: { // 隐藏网格线
+						show: false
+					}
+				},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: [6, 18, 37, 9, 12, 21]
+				}],
+
+			};
+			// 指定图表的配置项和数据
+			var option5 = {
+				title: {
+					text: '飞行里程概况',
+					textStyle: {
+						color: '#7f9ead',
+						fontSize: 15
+					},
+					subtext: '近7日飞行总里程',
+					subtextStyle: {
+						color: '#7f9ead',
+						fontSize: 12
+					},
+				},
+				xAxis: {
+					type: 'category',
+					data: ['05', '06', '07', '08', '09', '10', '11'],
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: { // 隐藏网格线
+						show: false
+					}
+				},
+				yAxis: {
+					type: 'value',
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: { // 隐藏网格线
+						show: false
+					}
+				},
+				series: [{
+					data: [82, 133, 90, 93, 129, 65, 132],
+					type: 'line'
+				}]
+			};
+			var option1 = {
+				title: {
+					text: '第一个 ECharts 实例',
+					textStyle: {
+						color: '#7f9ead',
+						fontSize: 15
+					}
+				},
+				series: [{
+					name: '访问来源',
+					radius: [20, 110],
+					center: ['30%', '50%'],
+					type: 'pie', // 设置图表类型为饼图
+					radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					data: [ // 数据数组，name 为数据项名称，value 为数据项值
+
+						{
+							value: 335,
+							name: '直接访问'
+						},
+						{
+							value: 400,
+							name: '搜索引擎'
 						}
-					},
-					//配置属性
-					series: [{
-						name: '实时飞机数',
-						type: 'map',
-						mapType: 'china',
-						roam: true,
-						left: "10%",
-						top: "10%",
-						zoom: 1.25, //这里是关键，一定要放在 series中
+					]
+				}, {
+					name: '访问来源1',
+					radius: [30, 110],
+					center: ['70%', '50%'],
+					type: 'pie', // 设置图表类型为饼图
+					radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+					data: [ // 数据数组，name 为数据项名称，value 为数据项值
+						{
+							value: 235,
+							name: '视频广告'
+						},
+						{
+							value: 274,
+							name: '联盟广告'
+						}
+					]
+				}]
+			};
 
-						label: {
-							normal: {
-								show: true, //省份名称  
-								textStyle: { //图例文字的样式
-									color: '#7f9ead',
-									fontSize: 14
-								}
-							},
-							emphasis: {
-								show: false
+			// 基于准备好的dom，初始化echarts实例
+			var myChart2 = echarts.init(document.getElementById('china-map'));
+
+			function randomData() {
+				return Math.round(Math.random() * 30);
+			}
+			var mydata = [{
+					name: '北京',
+					value: '100'
+				}, {
+					name: '天津',
+					value: randomData()
+				},
+				{
+					name: '上海',
+					value: randomData()
+				}, {
+					name: '重庆',
+					value: randomData()
+				},
+				{
+					name: '河北',
+					value: randomData()
+				}, {
+					name: '河南',
+					value: randomData()
+				},
+				{
+					name: '云南',
+					value: randomData()
+				}, {
+					name: '辽宁',
+					value: randomData()
+				},
+				{
+					name: '黑龙江',
+					value: randomData()
+				}, {
+					name: '湖南',
+					value: randomData()
+				},
+				{
+					name: '安徽',
+					value: randomData()
+				}, {
+					name: '山东',
+					value: randomData()
+				},
+				{
+					name: '新疆',
+					value: randomData()
+				}, {
+					name: '江苏',
+					value: randomData()
+				},
+				{
+					name: '浙江',
+					value: randomData()
+				}, {
+					name: '江西',
+					value: randomData()
+				},
+				{
+					name: '湖北',
+					value: randomData()
+				}, {
+					name: '广西',
+					value: randomData()
+				},
+				{
+					name: '甘肃',
+					value: randomData()
+				}, {
+					name: '山西',
+					value: randomData()
+				},
+				{
+					name: '内蒙古',
+					value: randomData()
+				}, {
+					name: '陕西',
+					value: randomData()
+				},
+				{
+					name: '吉林',
+					value: randomData()
+				}, {
+					name: '福建',
+					value: randomData()
+				},
+				{
+					name: '贵州',
+					value: randomData()
+				}, {
+					name: '广东',
+					value: randomData()
+				},
+				{
+					name: '青海',
+					value: randomData()
+				}, {
+					name: '西藏',
+					value: randomData()
+				},
+				{
+					name: '四川',
+					value: randomData()
+				}, {
+					name: '宁夏',
+					value: randomData()
+				},
+				{
+					name: '海南',
+					value: randomData()
+				}, {
+					name: '台湾',
+					value: randomData()
+				},
+				{
+					name: '香港',
+					value: randomData()
+				}, {
+					name: '澳门',
+					value: randomData()
+				}
+			];
+
+			var option2 = {
+				// backgroundColor: '#041932',
+				tooltip: {
+					trigger: 'item'
+				},
+				title: {
+					text: '实时飞机数量',
+					textStyle: {
+						color: '#7f9ead',
+						fontSize: 15
+					}
+				},
+				//配置属性
+				series: [{
+					name: '实时飞机数',
+					type: 'map',
+					mapType: 'china',
+					roam: true,
+					left: "10%",
+					top: "10%",
+					zoom: 1.25, //这里是关键，一定要放在 series中
+
+					label: {
+						normal: {
+							show: true, //省份名称  
+							textStyle: { //图例文字的样式
+								color: '#7f9ead',
+								fontSize: 14
 							}
 						},
-						data: mydata //数据
-					}]
-				};
-
-				var option3 = {
-					title: {
-						text: '回传视频构成',
-						textStyle: {
-							color: '#7f9ead',
-							fontSize: 15
+						emphasis: {
+							show: false
 						}
 					},
-					tooltip: {
-						trigger: 'item',
-						formatter: '{a} <br/>{b}: {c} ({d}%)'
+					data: mydata //数据
+				}]
+			};
+
+			var option3 = {
+				title: {
+					text: '回传视频构成',
+					textStyle: {
+						color: '#7f9ead',
+						fontSize: 15
+					}
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: '{a} <br/>{b}: {c} ({d}%)'
+				},
+				series: [{
+					name: '回传视频构成',
+					type: 'pie',
+					radius: ['50%', '63%'],
+					avoidLabelOverlap: false,
+					label: {
+						formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+						backgroundColor: '#eee',
+						borderColor: '#aaa',
+						borderWidth: 1,
+						borderRadius: 4,
+						// shadowBlur:3,
+						// shadowOffsetX: 2,
+						// shadowOffsetY: 2,
+						// shadowColor: '#999',
+						// padding: [0, 7],
+						rich: {
+							a: {
+								color: '#999',
+								lineHeight: 22,
+								align: 'center'
+							},
+							// abg: {
+							//     backgroundColor: '#333',
+							//     width: '100%',
+							//     align: 'right',
+							//     height: 22,
+							//     borderRadius: [4, 4, 0, 0]
+							// },
+							hr: {
+								borderColor: '#aaa',
+								width: '100%',
+								borderWidth: 0.5,
+								height: 0
+							},
+							b: {
+								fontSize: 16,
+								lineHeight: 33
+							},
+							per: {
+								color: '#eee',
+								backgroundColor: '#334455',
+								padding: [2, 4],
+								borderRadius: 2
+							}
+						}
 					},
-					series: [{
-						name: '访问来源',
-						type: 'pie',
-						radius: ['50%', '63%'],
-						avoidLabelOverlap: false,
-						/*label: {
-							normal: {
-								show: false,
-								position: 'center'
-							},
-							emphasis: {
-								show: true,
-								textStyle: {
-									fontSize: '20',
-									fontWeight: 'bold'
-								}
-							}
+					/*labelLine: {
+						normal: {
+							show: false
+						}
+					},*/
+					data: [{
+							value: 33,
+							name: '大疆'
 						},
-						labelLine: {
-							normal: {
-								show: false
-							}
-						},*/
-						data: [{
-								value: 33,
-								name: '大疆'
-							},
-							{
-								value: 31,
-								name: '御2'
-							},
-							{
-								value: 23,
-								name: '禅思'
-							},
-							{
-								value: 13,
-								name: 'EBee'
-							},
-							{
-								value: 154,
-								name: '精灵'
-							}
-						]
-					}]
-				};
+						{
+							value: 31,
+							name: '御2'
+						},
+						{
+							value: 23,
+							name: '禅思'
+						},
+						{
+							value: 13,
+							name: 'EBee'
+						},
+						{
+							value: 154,
+							name: '精灵'
+						}
+					]
+				}]
+			};
+			
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+			myChart1.setOption(option1);
+			myChart2.setOption(option2);
+			myChart3.setOption(option3);
+			myChart4.setOption(option4);
+			myChart5.setOption(option5);
+			// 响应式布局
+			$(window).resize(function() {
+				myChart.resize();
+				myChart1.resize();
+				myChart2.resize();
+				myChart3.resize();
+				myChart4.resize();
+				myChart5.resize();
+			});
 
-				// 使用刚指定的配置项和数据显示图表。
-				myChart.setOption(option);
-				myChart1.setOption(option1);
-				myChart2.setOption(option2);
-				myChart3.setOption(option3);
-				myChart4.setOption(option4);
-				myChart5.setOption(option5);
-				// 响应式布局
-				$(window).resize(function() {
-					myChart.resize();
-					myChart1.resize();
-					myChart2.resize();
-					myChart3.resize();
-					myChart4.resize();
-					myChart5.resize();
-				});
-
-				$(window).load(function() {
-					// border: solid 1px blue;
-					$("canvas").css("border", "solid 2px #1e5173");
-					$("canvas").css("border-radius", "5px");
-					$("#china-map canvas").css("border", "0px");
-				});
-			</script>
-			<script type="text/javascript" src="js/getnowtime.js"></script>
-		</body>
+			$(window).load(function() {
+				// border: solid 1px blue;
+				$("canvas").css("border", "solid 2px #1e5173");
+				$("canvas").css("border-radius", "5px");
+				$("#china-map canvas").css("border", "0px");
+			});
+		</script>
+		<script type="text/javascript" src="js/getnowtime.js"></script>
+	</body>
 
 </html>
