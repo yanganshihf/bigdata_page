@@ -434,9 +434,9 @@
 					series: [{
 						name: '访问来源',
 						radius: [20, 110],
-						center: ['25%', '50%'],
+						center: ['30%', '50%'],
 						type: 'pie', // 设置图表类型为饼图
-						radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+						radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
 						data: [ // 数据数组，name 为数据项名称，value 为数据项值
 
 							{
@@ -451,9 +451,9 @@
 					}, {
 						name: '访问来源1',
 						radius: [30, 110],
-						center: ['75%', '50%'],
+						center: ['70%', '50%'],
 						type: 'pie', // 设置图表类型为饼图
-						radius: '45%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+						radius: ['40%', '53%'], // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
 						data: [ // 数据数组，name 为数据项名称，value 为数据项值
 							{
 								value: 235,
@@ -600,7 +600,7 @@
 						trigger: 'item'
 					},
 					title: {
-						text: '第一个 ECharts 实例',
+						text: '实时飞机数量',
 						textStyle: {
 							color: '#7f9ead',
 							fontSize: 15
@@ -634,7 +634,7 @@
 
 				var option3 = {
 					title: {
-						text: '第一个 ECharts 实例',
+						text: '回传视频构成',
 						textStyle: {
 							color: '#7f9ead',
 							fontSize: 15
@@ -647,9 +647,9 @@
 					series: [{
 						name: '访问来源',
 						type: 'pie',
-						radius: ['40%', '55%'],
+						radius: ['50%', '63%'],
 						avoidLabelOverlap: false,
-						label: {
+						/*label: {
 							normal: {
 								show: false,
 								position: 'center'
@@ -666,26 +666,26 @@
 							normal: {
 								show: false
 							}
-						},
+						},*/
 						data: [{
-								value: 335,
-								name: '直接访问'
+								value: 33,
+								name: '大疆'
 							},
 							{
-								value: 310,
-								name: '邮件营销'
+								value: 31,
+								name: '御2'
 							},
 							{
-								value: 234,
-								name: '联盟广告'
+								value: 23,
+								name: '禅思'
 							},
 							{
-								value: 135,
-								name: '视频广告'
+								value: 13,
+								name: 'EBee'
 							},
 							{
-								value: 1548,
-								name: '搜索引擎'
+								value: 154,
+								name: '精灵'
 							}
 						]
 					}]
