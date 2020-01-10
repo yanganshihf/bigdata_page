@@ -313,7 +313,7 @@
 				// 指定图表的配置项和数据
 				var option = {
 					title: {
-						text: '第一个 ECharts 实例',
+						text: '飞机型号数量',
 						textStyle: {
 							color: '#7f9ead',
 							fontSize: 15
@@ -324,7 +324,7 @@
 						data: ['销量']
 					},*/
 					xAxis: {
-						data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+						data: ["大疆", "御2", "精灵", "禅思", "EBee", "精灵4"],
 						axisLabel: {
 							color: '#fff'
 						},
@@ -350,18 +350,19 @@
 				// 指定图表的配置项和数据
 				var option4 = {
 					title: {
-						text: '第一个 ECharts 实例',
+						text: '回传影像面积',
 						textStyle: {
 							color: '#7f9ead',
 							fontSize: 15
-						}
+						},
+						
 					},
 					tooltip: {},
 					/*legend: {
 						data: ['销量']
 					},*/
 					xAxis: {
-						data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+						data: ["大疆", "御2", "精灵", "禅思", "EBee", "精灵4"],
 						axisLabel: {
 							color: '#fff'
 						},
@@ -380,22 +381,27 @@
 					series: [{
 						name: '销量',
 						type: 'bar',
-						data: [5, 20, 36, 10, 10, 20]
+						data: [6, 18, 37, 9, 12, 21]
 					}],
 
 				};
 				// 指定图表的配置项和数据
 				var option5 = {
 					title: {
-						text: '第一个 ECharts 实例',
+						text: '飞行里程概况',
 						textStyle: {
 							color: '#7f9ead',
 							fontSize: 15
-						}
+						},
+						subtext:'近7日飞行总里程',
+						subtextStyle: {
+							color: '#7f9ead',
+							fontSize: 12
+						},
 					},
 					xAxis: {
 						type: 'category',
-						data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+						data: ['05', '06', '07', '08', '09', '10', '11'],
 						axisLabel: {
 							color: '#fff'
 						},
@@ -413,7 +419,7 @@
 						}
 					},
 					series: [{
-						data: [820, 932, 901, 934, 1290, 1330, 1320],
+						data: [82, 133, 90, 93, 129, 65, 132],
 						type: 'line'
 					}]
 				};
