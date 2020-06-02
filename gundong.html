@@ -41,10 +41,10 @@
 				<li>项目负责人 : {{info.leaderName}}</li>
 				<li>开始时间 : {{info.startYear}}</li>
 				<li>结束时间 : {{info.endYear}}</li>
-				<li>项目目标 : </li>
-				<li v-for="goal in goals">{{goal}}</li>
-				<li>项目内容 : <!-- {{info.proContent}} --></li>
-				<li v-for="cont in conts">{{cont}}</li>
+				<li style="margin-bottom: -30px;">项目目标 : </li>
+				<li v-for="goal in goals">&emsp;&emsp;&emsp;&emsp;&emsp;{{goal}}</li>
+				<li style="margin-bottom: -30px;">项目内容 : </li>
+				<li v-for="cont in conts">&emsp;&emsp;&emsp;&emsp;&emsp;{{cont}}</li>
 				<li></li>
 			</ul>
 		</div>
@@ -78,11 +78,11 @@
 		/* 项目概况数据 */
 		var linelen = 0;
 		$(window).on("load",function(){
-			linelen = $("#gaikuang").width()/12.5
+			linelen = $("#gaikuang").width()/13.5
 			setdata()
 		})
 		$(window).on("resize",function(){
-			linelen = $("#gaikuang").width()/12.5
+			linelen = $("#gaikuang").width()/13.5
 			setdata()
 		})
 		function setdata(){
