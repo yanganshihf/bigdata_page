@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<style>
+			.notice_active {
+				float: left;
+				width: 100%;
+				height: 320px;
+				padding: 0;
+				overflow: hidden;
+				position: relative;
+				box-sizing: border-box;
+				padding: 0px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+				
+			.notice_active>ul>li {
+				line-height: 30px;
+				display: flex;
+				align-items: center;
+				color: rgba(0, 163, 240, 1);
+				font-size: 12px;
+			}
+			.notice_active>ul>li>img {
+				width: 200px;
+				margin-right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="gaikuang" class="notice_active">
+			<ul style="padding: 0px;">
+				<li>项目名称 : {{info.proName}}</li>
+				<li>承办单位 : {{info.undertakeUnit}}</li>
+				<li>所属工程 : {{info.ownEngineering}}</li>
+				<li>项目负责人 : {{info.leaderName}}</li>
+				<li>开始时间 : {{info.startYear}}</li>
+				<li>结束时间 : {{info.endYear}}</li>
+				<li>项目目标 : </li>
+				<li v-for="goal in goals">{{goal}}</li>
+				<li>项目内容 : <!-- {{info.proContent}} --></li>
+				<li v-for="cont in conts">{{cont}}</li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var time = setInterval(function() {
+			t();
+		}, 3000)
+		
+		function t() {
+			var he = $(".notice_active>ul>li").height(); //找到li高
+			$(".notice_active>ul>li").eq(0).appendTo($(".notice_active>ul")); //复制第一个到最后一个
+			$(".notice_active>ul").animate({
+				"marginTop": "-" + he
+			}, 500, function() {
+				$(".notice_active>ul").css({
+					"marginTop": 0
+				})
+			})
+		}
+		
+		var xmgkvm = new Vue({
+			el:'#gaikuang',
+			data:{
+				info : {},
+				goals : [],
+				conts : []
+			}
+		})
+		
+		/* 项目概况数据 */
+		var linelen = 55;
+		$.get('json/xmgk.json',{},function(res){
+			xmgkvm.info = res[0].data;
+			var goalstr = res[0].data.proOverallgoal
+			var Contstr = res[0].data.proContent
+			var goallen = goalstr.length
+			var Contlen = Contstr.length
+			var goals = [];
+			var conts = [];
+			for(i=0;i<goallen;i+=linelen){
+				goals.push(goalstr.substring(i,i+linelen));
+			}
+			for(i=0;i<Contlen;i+=linelen){
+				conts.push(Contstr.substring(i,i+linelen));
+			}
+			xmgkvm.goals = goals
+			xmgkvm.conts = conts
+		},'json')
+	</script>
+</html>

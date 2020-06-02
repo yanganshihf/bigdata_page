@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<style>
+			.notice_active {
+				float: left;
+				width: 100%;
+				height: 320px;
+				padding: 0;
+				overflow: hidden;
+				position: relative;
+				box-sizing: border-box;
+				padding: 1 1%;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			.notice_active>ul>li {
+				line-height: 30px;
+				display: block;
+				width: 80%;
+				align-items: center;
+				color: rgba(0, 163, 240, 1);
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="gaikuang" class="notice_active">
+			<ul>
+				<li>项目名称 : {{info.proName}}</li>
+				<li>承办单位 : {{info.undertakeUnit}}</li>
+				<li>所属工程 : {{info.ownEngineering}}</li>
+				<li>项目负责人 : {{info.leaderName}}</li>
+				
+				<li>开始时间 : {{info.startYear}}</li>
+				<li>结束时间 : {{info.endYear}}</li>
+				<!-- <li v-for="goal in goals">{{goal}}</li> -->
+				<li>项目内容 : {{info.proContent}}</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var time = setInterval(function() {
+			t();
+		}, 3500)
+		
+		function t() {
+			var he = $(".notice_active>ul>li").height(); //找到li高
+			$(".notice_active>ul>li").eq(0).appendTo($(".notice_active>ul")); //复制第一个到最后一个
+			$(".notice_active>ul").animate({
+				"marginTop": "-" + he
+			}, 500, function() {
+				$(".notice_active>ul").css({
+					"marginTop": 0
+				})
+			})
+		}
+		
+		var xmgkvm = new Vue({
+			el:'#gaikuang',
+			data:{
+				info : {},
+				goals : []
+			}
+		})
+		/* 项目概况数据 */
+		$.get('json/xmgk.json',{},function(res){
+			
+			xmgkvm.info = res[0].data;
+			var goalstr = res[0].data.proOverallgoal
+			var goallen = goalstr.length
+			
+			var goals = [];
+			var linelen = 45;
+			
+			for(i=0;i<goallen;i+=linelen){
+				goals.push(goalstr.substring(i,i+linelen));
+				
+			}
+			xmgkvm.goals = goals
+		},'json')
+	</script>
+</html>

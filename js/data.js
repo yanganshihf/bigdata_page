@@ -96,17 +96,6 @@ var option1 = {
 };
 myChart1.setOption(option1);
 
-xmgkvm = new Vue({
-	el:'#gaikuang',
-	data:{
-		info : {}
-	}
-})
-/* 项目概况数据 */
-$.get('json/xmgk.json',{},function(res){
-	xmgkvm.info = res[0].data;
-},'json')
-
 var myChart2 = echarts.init(document.getElementById('main2'), 'walden');
 // 指定图表的配置项和数据
 var option2 = {

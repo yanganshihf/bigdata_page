@@ -40,7 +40,7 @@
 			#gaikuang{
 				background:url('img/项目概况.png') no-repeat;
 				background-size: 100% 100%;
-				overflow-y: auto;
+				overflow-y: hidden;
 				height: 65%;
 			}
 			#title{
@@ -55,12 +55,15 @@
 			}
 			#tabcontainer{
 				color: rgb(45,147,220);
-				margin: 45px 10px 15px 30px;
+				margin: 45px 20px 5px 20px;
 				height: 85%;
-				overflow-y: auto;
+				overflow-y: hidden;
 			}
-			td{
-				vertical-align:top;
+			iframe{
+				width: 100%;
+				height: 100%;
+				overflow-y: hidden;
+				border: none;
 			}
 		</style>
 	</head>
@@ -76,41 +79,8 @@
 			<div id="gaikuang">
 				<!-- 项目概况 -->
 				<div id="tabcontainer">
-				<table>
-					<tr>
-						<td style="min-width: 80px;">项目名称:</td>
-						<td>{{info.proName}}</td>
-					</tr>
-					<tr>
-						<td>承办单位:</td>
-						<td>{{info.undertakeUnit}}</td>
-					</tr>
-					<tr>
-						<td>所属工程:</td>
-						<td>{{info.ownEngineering}}</td>
-					</tr>
-					<tr>
-						<td>项目负责人:</td>
-						<td>{{info.leaderName}}</td>
-					</tr>
-					<tr>
-						<td>开始时间:</td>
-						<td>{{info.startYear}}</td>
-					</tr>
-					<tr>
-						<td>结束时间:</td>
-						<td>{{info.endYear}}</td>
-					</tr>
-					
-					<tr>
-						<td>项目目标:</td>
-						<td>{{info.proOverallgoal}}</td>
-					</tr>
-					<tr>
-						<td>项目内容:</td>
-						<td>{{info.proContent}}</td>
-					</tr>
-				</table>
+				
+					<iframe src="gundong.html"></iframe>
 				</div>
 			</div>
 			<div id="main2" style="height: 30%;margin-top: 15px;"><!-- 灾害点对比分析 --></div>
