@@ -1,17 +1,36 @@
+var barstyle = {
+			color: new echarts.graphic.LinearGradient(
+				0, 0, 0, 1,
+				[{
+						offset: 0,
+						color: '#83bff6'
+					},
+					{
+						offset: 0.5,
+						color: '#188df0'
+					},
+					{
+						offset: 1,
+						color: '#188df0'
+					}
+				]
+			)
+		}
+
 var myChart0 = echarts.init(document.getElementById('main0'), 'macarons');
 var option0 = {
 	tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b} : {c} ({d}%)'
-    },
-    legend: {
-        type: 'scroll',
-        orient: 'vertical',
-        right: 5,
-        top: 35,
-        bottom: 20,
-        data: ["大疆","御2","禅思","EBee","精灵"]
-    },
+		trigger: 'item',
+		formatter: '{a} <br/>{b} : {c} ({d}%)'
+	},
+	legend: {
+		type: 'scroll',
+		orient: 'vertical',
+		right: 5,
+		top: 35,
+		bottom: 20,
+		data: ["大疆", "御2", "禅思", "EBee", "精灵"]
+	},
 	series: [{
 		name: '灾害类型',
 		type: 'pie',
@@ -79,6 +98,7 @@ var option1 = {
 	series: [{
 		name: '',
 		type: 'bar',
+		itemStyle: barstyle,
 		label: {
 			show: true,
 			position: 'top',
@@ -192,6 +212,7 @@ var option3 = {
 	series: [{
 		name: '',
 		type: 'bar',
+		itemStyle: barstyle,
 		label: {
 			show: true,
 			position: 'top',
@@ -235,6 +256,7 @@ var option4 = {
 	series: [{
 		name: '',
 		type: 'bar',
+		itemStyle: barstyle,
 		label: {
 			show: true,
 			position: 'top',
