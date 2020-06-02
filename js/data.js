@@ -1,17 +1,24 @@
-var myChart0 = echarts.init(document.getElementById('main0'), 'walden');
+var myChart0 = echarts.init(document.getElementById('main0'), 'macarons');
 var option0 = {
-	
 	tooltip: {
-		trigger: 'item',
-		formatter: '{a} <br/>{b}: {c} ({d}%)'
-	},
+        trigger: 'item',
+        formatter: '{a} <br/>{b} : {c} ({d}%)'
+    },
+    legend: {
+        type: 'scroll',
+        orient: 'vertical',
+        right: 5,
+        top: 35,
+        bottom: 20,
+        data: ["大疆","御2","禅思","EBee","精灵"]
+    },
 	series: [{
 		name: '灾害类型',
 		type: 'pie',
-		radius: ['50%', '65%'],
+		radius: ['40%', '55%'],
 		avoidLabelOverlap: false,
 		label: {
-			formatter: '{b}：\n{d}%',
+			formatter: '{d}%',
 		},
 		/*labelLine: {
 			normal: {
@@ -20,17 +27,7 @@ var option0 = {
 		},*/
 		data: [{
 				value: 33,
-				name: '大疆',
-				label: {
-					normal: {
-						show: true, //省份名称  
-						position: 'center',
-						fontWeight: 'bold',
-						fontSize: 18,
-						color: '#fff',
-						formatter: '181GB'
-					}
-				}
+				name: '大疆'
 			},
 			{
 				value: 31,
@@ -53,10 +50,10 @@ var option0 = {
 	}]
 };
 myChart0.setOption(option0);
-var myChart1 = echarts.init(document.getElementById('main1'), 'walden');
+var myChart1 = echarts.init(document.getElementById('main1'), 'macarons');
 // 指定图表的配置项和数据
 var option1 = {
-	
+
 	tooltip: {},
 	/*legend: {
 		data: ['']
@@ -96,10 +93,10 @@ var option1 = {
 };
 myChart1.setOption(option1);
 
-var myChart2 = echarts.init(document.getElementById('main2'), 'walden');
+var myChart2 = echarts.init(document.getElementById('main2'), 'macarons');
 // 指定图表的配置项和数据
 var option2 = {
-	
+
 	xAxis: {
 		type: 'category',
 		data: ['05', '06', '07', '08', '09', '10', '11'],
@@ -122,24 +119,54 @@ var option2 = {
 		}
 	},
 	series: [{
-		data: [82, 133, 90, 93, 129, 65, 132],
-		type: 'line',
-		label: {
-			show: true,
-			position: 'top',
-			textStyle: {
-				color: '#FFFFFF',
-				fontSize: 15
-			}
+			name: '邮件营销',
+			type: 'line',
+			stack: '总量',
+			areaStyle: {},
+			data: [120, 132, 101, 134, 90, 230, 210]
 		},
-	}]
+		{
+			name: '联盟广告',
+			type: 'line',
+			stack: '总量',
+			areaStyle: {},
+			data: [220, 182, 191, 234, 290, 330, 310]
+		},
+		{
+			name: '视频广告',
+			type: 'line',
+			stack: '总量',
+			areaStyle: {},
+			data: [150, 232, 201, 154, 190, 330, 410]
+		},
+		{
+			name: '直接访问',
+			type: 'line',
+			stack: '总量',
+			areaStyle: {},
+			data: [320, 332, 301, 334, 390, 330, 320]
+		},
+		{
+			name: '搜索引擎',
+			type: 'line',
+			stack: '总量',
+			label: {
+				normal: {
+					show: true,
+					position: 'top'
+				}
+			},
+			areaStyle: {},
+			data: [820, 932, 901, 934, 1290, 1330, 1320]
+		}
+	]
 };
 myChart2.setOption(option2);
 
-var myChart3 = echarts.init(document.getElementById('main3'), 'walden');
+var myChart3 = echarts.init(document.getElementById('main3'), 'macarons');
 // 指定图表的配置项和数据
 var option3 = {
-	
+
 	tooltip: {},
 	/*legend: {
 		data: ['']
@@ -179,10 +206,10 @@ var option3 = {
 };
 myChart3.setOption(option3);
 
-var myChart4 = echarts.init(document.getElementById('main4'), 'walden');
+var myChart4 = echarts.init(document.getElementById('main4'), 'macarons');
 // 指定图表的配置项和数据
 var option4 = {
-	
+
 	tooltip: {},
 	/*legend: {
 		data: ['']
