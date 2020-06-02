@@ -76,23 +76,33 @@
 		})
 		
 		/* 项目概况数据 */
-		var linelen = 55;
-		$.get('json/xmgk.json',{},function(res){
-			xmgkvm.info = res[0].data;
-			var goalstr = res[0].data.proOverallgoal
-			var Contstr = res[0].data.proContent
-			var goallen = goalstr.length
-			var Contlen = Contstr.length
-			var goals = [];
-			var conts = [];
-			for(i=0;i<goallen;i+=linelen){
-				goals.push(goalstr.substring(i,i+linelen));
-			}
-			for(i=0;i<Contlen;i+=linelen){
-				conts.push(Contstr.substring(i,i+linelen));
-			}
-			xmgkvm.goals = goals
-			xmgkvm.conts = conts
-		},'json')
+		var linelen = 0;
+		$(window).on("load",function(){
+			linelen = $("#gaikuang").width()/12.5
+			setdata()
+		})
+		$(window).on("resize",function(){
+			linelen = $("#gaikuang").width()/12.5
+			setdata()
+		})
+		function setdata(){
+			$.get('json/xmgk.json',{},function(res){
+				xmgkvm.info = res[0].data;
+				var goalstr = res[0].data.proOverallgoal
+				var Contstr = res[0].data.proContent
+				var goallen = goalstr.length
+				var Contlen = Contstr.length
+				var goals = [];
+				var conts = [];
+				for(i=0;i<goallen;i+=linelen){
+					goals.push(goalstr.substring(i,i+linelen));
+				}
+				for(i=0;i<Contlen;i+=linelen){
+					conts.push(Contstr.substring(i,i+linelen));
+				}
+				xmgkvm.goals = goals
+				xmgkvm.conts = conts
+			},'json')
+		}
 	</script>
 </html>
