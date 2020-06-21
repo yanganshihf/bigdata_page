@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="data/tabdata.js"></script>
+		<script src="data/data_xa.js"></script>
+		<script src="data/dataRamdom.js"></script>
+		<script src="layui/layui.js"></script>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.js"></script>
+		<script src="echarts-gl/dist/echarts-gl.js"></script>
+		 <script src='liquidfill/dist/echarts-liquidfill.js'></script>
+		<script src="js/westeros.js"></script>
+		
+		<style>
+			body{
+				margin: 0px;
+				overflow-y: hidden;
+				background: url('img/背景2.png') no-repeat;
+				background-size: 100% 100%;
+			}
+			#title {
+				background: url('img/表头背景.png') no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#titleimg {
+				height: 60px;
+				position: absolute;
+				left: calc(50% - 180px);
+				top:0
+			}
+
+			#contain {
+				width: 98%;
+				padding-left: 1%;
+				padding-right: 1%;
+				height: calc(100vh - 60px);
+			}
+
+			#qushi {
+				background: url('img/覆盖率.png') no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#goucheng {
+				background: url('img/林地土地构成.png') no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#gongcheng {
+				background: url('img/蓄积量.png') no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#qiyuan {
+				background: url('img/起源结构.png') no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#shijian {
+				background: url('img/林业工程.png') no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#leibie {
+				background: url('img/森林类别.png') no-repeat;
+				background-size: 100% 100%;
+			}
+			.cont{
+				/* border: solid 1px lightgray;margin: -1px; */
+				height: 100%;
+				float: left;
+			}
+			.charts{
+				width: 100%;
+				height: 31.5%;
+				margin-top: 2%;
+			}
+			#mymap{
+				height: 100%;
+				margin-top: -45px;
+			}
+			#mymap2{
+				height: 100%;
+				margin-top: -45px;
+				display: none;
+			}
+			.titleStr{
+				color: white;
+				width: 200px;
+				float: left;
+				padding-top: 17.5px;
+				padding-left: 10px;
+			}
+			.titleStr2{
+				color: white;
+				width: 90px;
+				text-align: center;
+				float: right;
+				padding-top: 17.5px;
+				padding-left: 10px;
+				margin-right: 10px;
+			}
+			.sysChanger{
+				display: none;
+				position: absolute;
+				width: 335px;
+				height: 90px;
+				background-color: white;
+				z-index: 999;
+				right: 0%;
+				top: 60px;
+				overflow-y: hidden;
+				overflow-x: hidden;
+				overflow: hidden;
+				opacity:0.85;
+			}
+			#returnbtn {
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				z-index: 9999;
+				top: 90%;
+				left:67%;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="vueApp">
+			<p style="position: absolute;top: 11%;right:9%;color: white;">(%)</p>
+			<p style="position: absolute;top: 40.5%;right:10%;color: white;">(%)</p>
+			<p style="position: absolute;top: 70%;right:10%;color: white;">(%)</p>
+			<p style="position: absolute;top: 70%;left:16.5%;color: white;font-size: 12px;">(公顷)</p>
+			
+			<!-- 隐藏部分 -->
+			<iframe class="sysChanger" src="sysChanger.html" ></iframe>
+			<div style="position: absolute;height: 150px;width: 150px;right:13.3%;top:43.5%" id="lang"></div>
+			
+			<!-- 显示部分 -->
+			<div id="title" style="width: 100%;height: 60px;">
+				<img style="float: left;height: 25px;margin-top: 15px;margin-left: 15px;" src="img/用户登录.png" />
+				<div class="titleStr">你好,admin,欢迎您登录</div>
+				
+				<img id="titleimg" src="img/题目.png" />
+				
+				<div onclick="quit()" class="titleStr2" style="width: 50px;">退出</div>
+				<img onclick="quit()" style="float: right;height: 20px;margin-top: 19px;margin-right: -15px;" src="img/退出.png" />
+				
+				<div class="titleStr2"><span onclick="sysChange()">系统切换</span><img id="sysChange" onclick="sysChange()" src="./img/收回.png"></div>
+				<img onclick="sysChange()" style="float: right;height: 20px;margin-top: 19px;margin-right: -15px;" src="img/系统切换.png" />
+				
+				<div id="fullscreen" class="titleStr2">全屏显示</div>
+				<img id="fullscreen2"  style="float: right;height: 20px;margin-top: 19px;margin-right: -15px;" src="img/全屏.png" />
+			</div>
+			<div id="contain">
+				<div class="cont" style="width: 27%;">
+					<div class="charts" id="qushi"></div>
+					<div class="charts" id="gongcheng"></div>
+					<div class="charts" id="shijian"></div>
+				</div>
+				<div class="cont" style="width: 46%;">
+					<img title="返回"
+					 id="returnbtn" src="img/返回.png" />
+					<div id="mymap"></div>
+				</div>
+				<div class="cont" style="width: 27%;">
+					<div class="charts" id="goucheng"></div>
+					<div class="charts" id="qiyuan"></div>
+					
+					<div class="charts" id="leibie"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="js/data.js"></script>
+		
+		<script>
+			// 响应式布局
+			$(window).resize(function() {
+				myChart0.resize();
+				myChart1.resize();
+				myChart2.resize();
+				myChart3.resize();
+				myChart4.resize();
+				myChart5.resize();
+				myChart.resize();
+			});
+			
+			// 切换系统
+			function sysChange(){
+				$(".sysChanger").show()
+			}
+			function hidesysChanger(){
+				$(".sysChanger").hide()
+			}
+			
+			// 退出
+			function quit(){
+				window.location.href = "/chongqing/FunctionMenu.jsp";
+			}
+			function gotopage(name){
+				window.location.href = name;
+			}
+			
+		</script>
+		<script src="js/fullscreen.js"></script>
+		<script src="js/fullscreen2.js"></script>
+		<script src="js/3dmap.js"></script>
+	</body>
+</html>

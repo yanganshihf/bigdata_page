@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/jquery.min.js"></script>
+		<title></title>
+		<style>
+			html{
+				width: 335px;
+				height: 90px;
+				overflow: hidden;
+				background-size: 100% 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			body{
+				padding: 0px;
+				margin: 0px;
+				overflow: hidden;
+			}
+			table{
+				width: 100%;
+				background-color: rgb(34,67,143);
+			}
+			td{
+				height: 90px;
+				text-align: center;
+				color: white;
+				cursor: pointer;
+			}
+			td:hover{
+				background-color: #01AAED;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="sys">
+			<tr>
+				<td class="sys" name="/chongqing/jsp/commandForFire/Home.jsp">
+					<img  src="layeropen/资源管理.png" />
+					<br>
+					资源管理
+				</td>
+				<td class="sys" name="/chongqing/jsp/system/systemHome.jsp">
+					<img  src="layeropen/应用支撑.png" />
+					<br>
+					应用支撑
+				</td>
+				<td class="sys" name="/chongqing/FunctionMenu.jsp">
+					<img  src="layeropen/返回首页.png" />
+					<br>
+					返回首页
+				</td>
+			</tr>
+			<!-- <tr>
+				<td>
+					<img class="sys" name="/heicha/bigdata/index.html" src="layeropen/巡检管理.png" />
+					<br>
+					展示分析
+				</td>
+				<td>
+					<img class="sys" name="" src="layeropen/资源管理.png" />
+					<br>
+					林草资源
+				</td>
+				<td>
+					<img class="sys" name="" src="layeropen/林业大数据.png" />
+					<br>
+					数据管理
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="sys" name="/heicha/jsp/system/systemHome.jsp" src="layeropen/应用支撑.png" />
+					<br>
+					应用支撑
+				</td>
+				<td>
+					<img class="sys" name="" src="layeropen/应用支撑.png" />
+					<br>
+					防火决策
+				</td>
+				<td>
+					<img class="sys" name="/heicha/FunctionMenu.jsp" src="layeropen/返回首页.png" />
+					<br>
+					返回首页
+				</td>
+				<td>
+				</td>
+			</tr> -->
+		</table>
+		
+		<script>
+			$("#sys").on("mouseleave",function(){
+				parent.hidesysChanger()
+			});
+			$(".sys").on("click",function(){
+				var name = $(this).attr("name");
+				parent.gotopage(name);
+			});
+		</script>
+	</body>
+</html>

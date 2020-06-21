@@ -21,12 +21,12 @@
     }
     echarts.registerTheme('macarons', {
         "color": [
-            "#2ec7c9",
-            "#b6a2de",
-            "#5ab1ef",
-            "#ffb980",
-            "#d87a80",
-            "#8d98b3",
+            "#1728fa",
+            "#ffd800",
+            "#00c6ff",
+            "#6000ff",
+            "#a321fe",
+            "#fe2181",
             "#e5cf0d",
             "#97b552",
             "#95706d",
@@ -206,12 +206,12 @@
             "symbol": "emptyCircle",
             "smooth": true,
             "color": [
-                "#2ec7c9",
-                "#b6a2de",
-                "#5ab1ef",
-                "#ffb980",
-                "#d87a80",
-                "#8d98b3",
+                "#1728fa",
+                "#ffd800",
+                "#00c6ff",
+                "#6000ff",
+                "#a321fe",
+                "#fe2181",
                 "#e5cf0d",
                 "#97b552",
                 "#95706d",
@@ -244,7 +244,7 @@
                 },
                 "emphasis": {
                     "areaColor": "rgba(254,153,78,1)",
-                    "borderColor": "#444444",
+                    "borderColor": "#444",
                     "borderWidth": 1
                 }
             },
@@ -270,7 +270,7 @@
                 },
                 "emphasis": {
                     "areaColor": "rgba(254,153,78,1)",
-                    "borderColor": "#444444",
+                    "borderColor": "#444",
                     "borderWidth": 1
                 }
             },
