@@ -175,7 +175,7 @@ function init3(data3) {
 	var option3 = {
 		tooltip: {
 			trigger: 'item',
-			formatter: '{a} <br/>{b} : {c} ({d}%)'
+			formatter: '{a} <br/>{b} : {c}公顷<br/> 占比 : {d}%'
 		},
 		legend: {
 			type: 'scroll',
@@ -241,7 +241,7 @@ function init4(data40, data41) {
 		series: [{
 				type: 'liquidFill',
 				label: {
-				normal: {
+					normal: {
 						// textStyle: {
 						color: '#0feeff',
 						insideColor: 'white',
@@ -262,7 +262,10 @@ function init4(data40, data41) {
 				radius: ['43%', '60%'],
 				center: ['33%', '50%'],
 				avoidLabelOverlap: false,
-
+				label: {
+					formatter: '{d}%',
+					fontSize : 12
+				},
 				data: data41
 			}
 		]
